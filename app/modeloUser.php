@@ -35,14 +35,13 @@ function modeloOkUser($user,$password){
     $tusuarios = $_SESSION['tusuarios'];
     foreach ($tusuarios as $clave => $valor){      
         if($clave==$user){
-            foreach ($valor as $dato){
-                if($dato==$password){
-                    return true;
-                }
-            }           
-        }
-        return false;
+            if($tusuarios[$clave][0]==$password){
+                return true;
+            }
+        }           
     }
+    return false;
+    
 }
 
 // Devuelve el plan de usuario (String)

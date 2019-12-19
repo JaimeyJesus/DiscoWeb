@@ -20,7 +20,8 @@ $rutasUser = [
     "Cerrar"      => "ctlUserCerrar",
     "VerUsuarios" => "ctlUserVerUsuarios",
     "Nuevo"       => "ctlUserNuevo",
-    "Cancelar"    => "ctlUserVerUsuarios"
+    "Cancelar"    => "ctlUserVerUsuarios",
+    "VerFicheros" => "ctlUserVerFicheros"
 ];
 
 
@@ -49,7 +50,20 @@ if (!isset($_SESSION['user'])){
     }
     // Usuario Normal PRIMERA VERSION SIN ACCIONES
     else {
-       $procRuta= "ctlUserInicio";    
+        if (isset($_GET['orden'])){
+            // La orden tiene una funcion asociada 
+            if ( isset ($rutasUser[$_GET['orden']]) ){
+                $procRuta =  $rutasUser[$_GET['orden']];
+            }
+            else {
+                // Error no existe función para la ruta
+                header('Status: 404 Not Found');
+                echo '<html><body><h1>Error 404: No existe la ruta <i>' .
+                    $_GET['ctl'] .
+                    '</p></body></html>';
+                    exit;
+            } 
+        }
     }
 }
 

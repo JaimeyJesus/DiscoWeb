@@ -22,14 +22,12 @@ function  ctlUserInicio(){
                     header('Location:index.php?orden=VerUsuarios');
                 }
                 else {
-                  // Usuario normal;
-                  // PRIMERA VERSIÓN SOLO USUARIOS ADMISTRADORES
-                  $msg="Error: Acceso solo permitido a usuarios Administradores.";
-                  // $_SESSION['modo'] = GESTIONFICHEROS;
-                  // Cambio de modo y redireccion a verficheros
+                   $_SESSION['modo'] = GESTIONFICHEROS;
+                   header('Location:index.php?orden=VerFicheros');
                 }
             }
             else {
+                
                 $msg="Error: usuario y contraseña no válidos.";
            }  
         }
@@ -132,3 +130,19 @@ function ctlUserdetalles(){
     $msg="Gestión de usuarios";
     include_once 'plantilla/detalles.php';
 }
+
+
+function ctlUserVerFicheros(){
+    $usuarios=modeloUserGetAll();
+    $userId=$_SESSION['user'];
+    $user=$usuarios[$userId];
+    $msg="Archivos del usuario: <b>".$userId."</b>";
+    include_once 'plantilla/verFicheros.php';
+}
+
+
+function ctlUserSubir(){
+
+}
+
+

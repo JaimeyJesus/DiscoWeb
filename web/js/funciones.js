@@ -21,3 +21,7 @@ function volverAtras(){
 function Alta(){
 	document.location.href="?orden=Alta";
 }
+
+function VerArchivos(){
+	document.location.href="?orden=verFicheros";
+}

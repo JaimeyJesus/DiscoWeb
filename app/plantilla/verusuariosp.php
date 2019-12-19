@@ -36,7 +36,7 @@ $auto = $_SERVER['PHP_SELF'];
 <form action='index.php'>
 	<input type='submit' name='orden' value='Cerrar'> 
 	<input type='submit' name='orden' value='Alta'> 
-	<input type='submit' name='orden' value='MisArchivos'> 
+	<input type='submit' name='orden' value='VerFicheros'> 
 
 </form>
 
