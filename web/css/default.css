@@ -85,6 +85,25 @@ textarea {
   	background-color: #5E9C97;
   	padding: 2%;
 }
+.grid-ficheros {
+	overflow: auto;
+	height:58vh;
+  	display: grid;
+  	grid-template-columns: 55vh 20vh 22vh 21vh 21vh 20vh 20vh ;
+  	background-color: #5E9C97;
+  	padding: 8vh 2%;
+  
+}
+
+.grid-cabecera-ficheros {
+	position:absolute;
+	margin-top:-4vh;
+	height:4vh;
+  	display: grid;
+  	grid-template-columns: 55vh 20vh 22vh 21vh 61vh ;
+  	background-color: #5E9C97;
+  	padding: 2%;
+}
 .grid-cabecera {
 	height:4vh;
   	display: grid;
@@ -93,20 +112,22 @@ textarea {
   	padding: 2%;
 }
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 4%;
-  font-size: 1em;
-  text-align: center; 
+  	background-color: rgba(255, 255, 255, 0.8);
+  	border: 1px solid rgba(0, 0, 0, 0.8);
+ 	padding: 4%;
+  	font-size: 1em;
+  	text-align: center; 
+  	
 }
 
 .grid-item-cabecera {
+	height:7vh;
 	color:#ffffff;
-  background-color: #206C66;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 4%;
-  font-size: 1em;
-  text-align: center; 
+  	background-color: #206C66;
+  	border: 1px solid rgba(0, 0, 0, 0.8);
+  	padding: 4%;
+  	font-size: 1em;
+  	text-align: center; 
 }
 
 #footer {
@@ -147,7 +168,7 @@ button{
 	height:4vh;
 }
 .botones{
-	margin-top:5vh;
+	margin-top:4vh;
 }
 
 ul{

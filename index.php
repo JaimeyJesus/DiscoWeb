@@ -12,16 +12,16 @@ modeloUserInit();
 // Relación entre peticiones y función que la va a tratar
 // Versión sin POO no manejo de Clases ni objetos
 $rutasUser = [
-    "Inicio"      => "ctlUserInicio",
-    "Alta"        => "ctlUserAlta",
-    "Detalles"    => "ctlUserDetalles",
-    "Modificar"   => "ctlUserModificar",
-    "Borrar"      => "ctlUserBorrar",
-    "Cerrar"      => "ctlUserCerrar",
-    "VerUsuarios" => "ctlUserVerUsuarios",
-    "Nuevo"       => "ctlUserNuevo",
-    "Cancelar"    => "ctlUserVerUsuarios",
-    "VerFicheros" => "ctlUserVerFicheros"
+    "Inicio"        => "ctlUserInicio",
+    "Alta"          => "ctlUserAlta",
+    "Detalles"      => "ctlUserDetalles",
+    "Modificar"     => "ctlUserModificar",
+    "Borrar"        => "ctlUserBorrar",
+    "Cerrar Sesión" => "ctlUserCerrar",
+    "VerUsuarios"   => "ctlUserVerUsuarios",
+    "Nuevo"         => "ctlUserNuevo",
+    "Cancelar"      => "ctlUserVerUsuarios",
+    "Mis Archivos"  => "ctlUserVerFicheros"
 ];
 
 

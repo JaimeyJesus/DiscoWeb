@@ -18,7 +18,7 @@ ob_start();
     <?php
     $auto = $_SERVER['PHP_SELF'];    
     ?>
-    <div class="grid-container">
+<div class="grid-container">
     <?php foreach ($usuarios as $clave => $datosusuario) : ?>
     		
     <div class="grid-item"><?= $clave ?></div>
@@ -41,9 +41,9 @@ ob_start();
 </div>
 <div class="botones">
 <form action='index.php'>
-	<input type='submit' name='orden' value='Cerrar'> 
+	<input type='submit' name='orden' value='Cerrar Sesión'> 
 	<input type='submit' name='orden' value='Alta'> 
-	<input type='submit' name='orden' value='MisArchivos'> 
+	<input type='submit' name='orden' value='Mis Archivos'> 
 </form>
 </div>
 <?php

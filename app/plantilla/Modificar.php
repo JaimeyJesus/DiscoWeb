@@ -38,10 +38,9 @@ Estado <select name="estado">
     <option value="B"<?=($usuarioM[4]=='Bloqueado')?'selected':''?>>Bloqueado</option>
     <option value="I"<?=($usuarioM[4]=='Inactivo')?'selected':''?>>Inactivo</option></select>
 
-	<button name="Modificar" type="submit" value="Modificar" 
-	onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">Modificar</button>
-
-	<button name="orden" value="atras">Atrás</button>
+	<input name="Modificar" type="submit" value="Modificar" 
+	onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">
+	<input type="submit" name="orden" value="Atrás">
 
 
 </form>       

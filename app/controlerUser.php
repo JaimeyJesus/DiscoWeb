@@ -107,7 +107,7 @@ function ctlUserModificar(){
         $usuarios = modeloUserGetAll();
         include_once 'plantilla/Modificar.php';
         }else{       
-            if(!isset($_POST['atras'])){
+            if(!isset($_POST['Atrás'])){
                 $usuarioid=$_POST['id'];
                 $usuarios = modeloUserGetAll();
                 $valoresUsuario= [$_POST['clave'] ,$_POST['nombre'],$_POST['email'], $_POST['plan'], $_POST['estado']];

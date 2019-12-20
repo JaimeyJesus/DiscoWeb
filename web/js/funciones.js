@@ -25,3 +25,4 @@ function Alta(){
 function VerArchivos(){
 	document.location.href="?orden=verFicheros";
 }
+
