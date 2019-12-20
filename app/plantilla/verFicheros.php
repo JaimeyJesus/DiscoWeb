@@ -6,10 +6,11 @@ ob_start();
 ?>
 <?=(isset($msg))?'<p>'.$msg.'</p>':''?>
 
-<div class="grid-container">
+<div class="grid-containerFicheros">
 <div class="grid-item"><b>Nombre</b></div>
 <div class="grid-item"><b>Tipo</b></div>
 <div class="grid-item"><b>Fecha</b></div>
+<div class="grid-item"><b>Tamaño</b></div>
 <div class="grid-item"><b>Operaciones</b></div>
 <div class="grid-item"></div>
 <div class="grid-item"></div>
@@ -18,27 +19,31 @@ $auto = $_SERVER['PHP_SELF'];
 // identificador => Nombre, email, plan y Estado
 ?>
 <?php 
-$directorio="../dat/".$userId;
+$directorio="app\\dat\\".$userId;
 if(is_dir($directorio)){
     $gestor=opendir($directorio);
     while(($archivo=readdir($gestor))!==false){
+        if( $archivo=="." || $archivo==".."){
+            continue;
+        }
         ?>
         <div class="grid-item"><?= $archivo ?></div>
-        <div class="grid-item"><?=filetype($archivo) ?></div>
-        <div class="grid-item"><?=filemtime($archivo) ?></div>
-        <div class="grid-item"><?=filesize($archivo) ?></div>
+        <div class="grid-item"><?=substr($archivo,-3) ?></div>
+        <div class="grid-item"><?=date("d/m/Y",filemtime($directorio."\\".$archivo)) ?></div>
+        <div class="grid-item"><?=round((filesize($directorio."\\".$archivo)/1024),2)."Kb" ?></div>
         <div class="grid-item"><a href="#"onclick="confirmarBorrar('<?= $archivo?>);">Borrar</a></div>
         <div class="grid-item"><a href="<?= $auto?>?orden=Modificar&id=<?= $clave ?>">Renombrar</a></div>
-        <div class="grid-item"><a href="<?= $auto?>?orden=Detalles&id=<?= $clave?>">Copartir</a></div>
-        </div>
+        <div class="grid-item"><a href="<?= $auto?>?orden=Detalles&id=<?= $clave?>">Compartir</a></div>
+        
 <?php
     }
 }
 else{
-    echo"El directorio no existe";
+    echo"El directorio no existe =>".$directorio;
 }
+
 ?>
-		
+</div>		
 
 
 <form action='index.php'>

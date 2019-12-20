@@ -189,3 +189,11 @@ function comprobarContraseñas($contraseña1,$contraseña2, &$msg){
         return false;
         }
 }
+
+
+function modeloUSerCrearDir($usuarioid){
+    $carpeta="app\\dat\\".$usuarioid;
+    if(!file_exists($carpeta)){
+        mkdir($carpeta, 0777, true);
+    }
+}

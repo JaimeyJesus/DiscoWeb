@@ -82,6 +82,12 @@ textarea {
   background-color: #5E9C97;
   padding: 2%;
 }
+.grid-containerFicheros {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  background-color: #5E9C97;
+  padding: 2%;
+}
 .grid-item {
 	
   background-color: rgba(255, 255, 255, 0.8);

@@ -85,6 +85,7 @@ function ctlUserAlta(){
                     $msg="Usuario dado de alta correctamente";
                     modeloUserSave();
                     ctlUserVerUsuarios();
+                    modeloUserCrearDir($usuarioid);
                     }else{
                         $msg="No se pudo relaizar la operación.";
                      }
