@@ -4,12 +4,11 @@ body {
   background-size:100%;
   background-attachment:fixed;
   text-align: justify;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 14px;
   color: #757E82;
 }
 
 #container {
+	
 	position:fixed;
 	margin: 1vh auto 1vh 5vw;
 	width: 90%;
@@ -27,6 +26,9 @@ body {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
+h1{
+	text-align:center;
+}
 #header h1 {
   font-size: 24px;
   margin: 0;
@@ -36,12 +38,11 @@ body {
   margin: 0;
 }
 
-#content {
-	
+#content {	
 	height:100%;
-  background: white;
-  clear: left;
-  padding: 6px;
+  	background: #5E9C97;;
+  	clear: left;
+  	padding: 6px;
 }
 
 #content h2 {
@@ -77,24 +78,35 @@ textarea {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto;
-  background-color: #5E9C97;
-  padding: 2%;
+	overflow: auto;
+	height:45vh;
+  	display: grid;
+  	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 20vh 20vh 20vh;
+  	background-color: #5E9C97;
+  	padding: 2%;
 }
-.grid-containerFicheros {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
-  background-color: #5E9C97;
-  padding: 2%;
+.grid-cabecera {
+	height:4vh;
+  	display: grid;
+  	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 20vh 20vh 20vh;
+  	background-color: #5E9C97;
+  	padding: 2%;
 }
 .grid-item {
-	
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 4%;
   font-size: 1em;
-  text-align: center;
+  text-align: center; 
+}
+
+.grid-item-cabecera {
+	color:#ffffff;
+  background-color: #206C66;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 4%;
+  font-size: 1em;
+  text-align: center; 
 }
 
 #footer {
@@ -108,9 +120,10 @@ textarea {
 
 form {
 	width: 50vw;
+	margin-left:10vw;
     display: grid;
     grid-template-columns: 10vw;
-    grid-gap: 16px;  
+    grid-gap: 6%;  
 }
 
 label {
@@ -128,4 +141,30 @@ button{
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
+}
+.icono{
+	width:2vw;
+	height:4vh;
+}
+.botones{
+	margin-top:5vh;
+}
+
+ul{
+	margin-left:10vw;
+	margin-right:10vw;
+}
+meter{
+	width:19vw;
+	height:3vh;
+	margin-top:.5vh;
+}
+span{
+	width:20vw;
+	height:5vh;
+	margin-top:-1vh;
+}
+
+span b{
+	margin-bottom:-2vh;
 }
