@@ -4,6 +4,7 @@ ob_start();
 ?>
 <h1>Modificación de usuario</h1>
 <div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
+<div id="divFormularioModificar">
 <form action="index.php?orden=Modificar" method="POST">
 <?php  
 $auto = $_SERVER['PHP_SELF'];
@@ -44,10 +45,8 @@ Estado <select name="estado">
 
 
 </form>       
-
+</div>
 <?php 
 $contenido = ob_get_clean();
 include_once "principal.php";
 ?>
-// Vacio el bufer y lo copio a contenido
-// Para que se muestre en div de contenido de la página principal

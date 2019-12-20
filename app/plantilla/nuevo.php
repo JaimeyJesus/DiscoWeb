@@ -5,6 +5,7 @@ ob_start();
 
 ?>
 <div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
+<div id="divFormularioNuevo">
 <form action="index.php?orden=Alta" method="POST">
 <?php  
 $auto = $_SERVER['PHP_SELF'];
@@ -34,7 +35,7 @@ Estado <select name="estado">
 <input type="submit" name="orden" value="Alta">
 <input type="submit" name="atras" value="atras">
 </form>
-     
+</div>    
 <?php 
 // Vacio el bufer y lo copio a contenido
 // Para que se mue p div de contenido de la página principal
