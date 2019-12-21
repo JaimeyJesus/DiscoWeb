@@ -58,7 +58,6 @@ function modeloUserDel($user){
     return false;
 }
 
-
 // Tabla de todos los usuarios para visualizar
 function modeloUserGetAll (){
     // Genero lo datos para la vista que no muestra la contraseña ni los códigos de estado o plan
@@ -75,7 +74,6 @@ function modeloUserGetAll (){
     return $tuservista;
 }
 
-
 // Vuelca los datos al fichero
 function modeloUserSave(){
     
@@ -83,7 +81,6 @@ function modeloUserSave(){
     file_put_contents(FILEUSER, $datosjon) or die ("Error al escribir en el fichero.");
   
 }
-
 
 //Vuelca nuevo usuario en la session
 function modeloUserNuevo($idusuario, $datosuser){
@@ -112,7 +109,6 @@ function modeloUserComprobacionesNuevo($usuarioid,$valoresusuario, $passrepetida
     return false;
 }
 
-
 //Funcion que comprueba las entradas del formulario modificar
 function modeloUserComprobacionesModificar($valoresusuario, &$msg){
     if(comprobarContraseñas($valoresusuario[0],$valoresusuario[0], $msg)){
@@ -124,8 +120,6 @@ function modeloUserComprobacionesModificar($valoresusuario, &$msg){
     }
     return false;
 }
-
-
 
 
 function modeloUserComprobarId($id, &$msg){
@@ -162,7 +156,6 @@ function modeloUserComprobarMail($mail, &$msg){
     return false;
     
 }
-
 
 
 function comprobarContraseñas($contraseña1,$contraseña2, &$msg){

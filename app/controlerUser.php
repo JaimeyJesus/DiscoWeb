@@ -80,7 +80,7 @@ function ctlUserAlta(){
             $usuarioid=$_POST['id']; 
             $passrepetida=$_POST['password2'];
             $valoresUsuario= [$_POST['password'] ,$_POST['nombre'],$_POST['mail'], $_POST['plan'], $_POST['estado']];
-            if(modeloUserComprobacionesNuevo($usuarioid,$valoresUsuario , $passrepetida , $msg)) {//comprueba valores introducidos
+            if(modeloUserComprobacionesNuevo($usuarioid, $valoresUsuario, $passrepetida, $msg)) {//comprueba valores introducidos
                 if(modeloUserNuevo($usuarioid, $valoresUsuario)){
                     $msg="Usuario dado de alta correctamente";
                     modeloUserSave();
@@ -133,17 +133,9 @@ function ctlUserdetalles(){
 }
 
 
-function ctlUserVerFicheros(){
-    $usuarios=modeloUserGetAll();
-    $userId=$_SESSION['user'];
-    $user=$usuarios[$userId];
-    $msg="Archivos del usuario: <b>".$userId."</b>";
-    include_once 'plantilla/verFicheros.php';
-}
 
 
-function ctlUserSubir(){
 
-}
+
 
 

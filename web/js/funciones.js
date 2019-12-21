@@ -1,6 +1,9 @@
 /**
  * Funciones auxiliares de javascripts 
  */
+$(document).ready(inicializarEventos);
+
+
 function confirmarBorrar(nombre,id){
   if (confirm("¿Quieres eliminar el usuario:  "+nombre+"?"))
   {
@@ -15,9 +18,6 @@ function confirmarModificar(nombre,id){
 	  }
 	}
 
-function volverAtras(){
-	window.history.back();
-}
 function Alta(){
 	document.location.href="?orden=Alta";
 }
@@ -25,4 +25,6 @@ function Alta(){
 function VerArchivos(){
 	document.location.href="?orden=verFicheros";
 }
+
+
 

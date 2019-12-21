@@ -4,7 +4,7 @@ include_once 'app/config.php';
 include_once 'app/controlerFile.php';
 include_once 'app/controlerUser.php';
 include_once 'app/modeloUser.php';
-
+include_once 'app/modeloFile.php';
 // Inicializo el modelo
 modeloUserInit();
 
@@ -21,7 +21,8 @@ $rutasUser = [
     "VerUsuarios"   => "ctlUserVerUsuarios",
     "Nuevo"         => "ctlUserNuevo",
     "Cancelar"      => "ctlUserVerUsuarios",
-    "Mis Archivos"  => "ctlUserVerFicheros"
+    "Mis Archivos"  => "ctlFileVerFicheros",
+    "Subir fichero" => "ctlFileSubirFichero"
 ];
 
 

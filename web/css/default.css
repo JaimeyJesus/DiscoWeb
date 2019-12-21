@@ -1,14 +1,16 @@
+*{
+	padding:0;
+	margin:0;
+}
+
 body {
   background: url(../img/nubes.jpg);
   background-repeat: no-repeat;
   background-size:100%;
   background-attachment:fixed;
-  text-align: justify;
-  color: #415158;
 }
 
-#container {
-	
+#container {	
 	position:fixed;
 	margin: 1vh auto 1vh 5vw;
 	width: 90%;
@@ -19,23 +21,23 @@ body {
 }
 
 #header {
-  background: #3A847E;
-  text-align: center;
-  padding: 10px;
-  color: white;
-  text-shadow: black 0.1em 0.1em 0.2em;
+	background: #3A847E;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 h1{
 	text-align:center;
 }
 #header h1 {
-  font-size: 4rem;
-  margin: 0;
+	font-size: 4rem;
+	margin: 0;
 }
 #header h2 {
-  font-size: 20px;
-  margin: 0;
+  	font-size: 20px;
+  	margin: 0;
 }
 
 #content {	
@@ -46,9 +48,9 @@ h1{
 }
 
 #content h2 {
-  color:#000;
-  font-size: 160%;
-  margin: 0 0 .5em;
+  	color:#000;
+  	font-size: 160%;
+  	margin: 0 0 .5em;
 }
 
 #aviso {
@@ -84,7 +86,7 @@ h1{
 }
 
 li {
-  padding: 18px;
+  	padding: 18px;
 }
 
 #aviso {
@@ -97,11 +99,11 @@ li {
 }
 
 a {
-  color: #429;
-  text-decoration: none;
+  	color: #429;
+  	text-decoration: none;
 }
 textarea {
-   resize: none;
+   	resize: none;
 }
 
 .grid-container {
@@ -158,12 +160,12 @@ textarea {
 }
 
 #footer {
-  color: white;
-  background: blue;
-  text-align: center;
-  padding: 20px;
-  margin: 0px;
-  height: 1%;
+  	color: white;
+  	background: blue;
+  	text-align: center;
+  	padding: 20px;
+  	margin: 0px;
+  	height: 1%;
 }
 
 form {
@@ -180,6 +182,10 @@ label {
 input {
     grid-column: 2 / 2;
 }
+input[type="submit"]{
+
+	margin-rigth:5%;	
+}
 
 button{
 	grid-column: 1 / 2;
@@ -193,8 +199,13 @@ button{
 	width:2vw;
 	height:4vh;
 }
-.botones{
-	margin-top:4vh;
+
+#botones{
+	padding:2%;
+	padding-left:24%;
+	display: grid;
+    grid-template-columns: 40vw;
+    grid-gap: 6%; 
 }
 
 ul{
@@ -215,3 +226,5 @@ span{
 span b{
 	margin-bottom:-2vh;
 }
+
+

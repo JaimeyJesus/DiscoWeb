@@ -19,6 +19,7 @@ $auto = $_SERVER['PHP_SELF'];
 ?>
 <div class="grid-ficheros">
 <?php 
+$numeroArchivos=0;
 $directorio="app/dat/".$userId;
 if(is_dir($directorio)){
     $gestor=opendir($directorio);
@@ -26,6 +27,7 @@ if(is_dir($directorio)){
         if( $archivo=="." || $archivo==".."){
             continue;
         }
+        
         ?>
         <div class="grid-item"><?= $archivo ?></div>
         <div class="grid-item"><?=substr($archivo,-3) ?></div>
@@ -46,12 +48,14 @@ else{
 ?>
 </div>		
 
-<div class="botones">
-<form action='index.php'>
-	<input type='submit' name='orden' value='Modificar sus datos'> 
-	<input type='submit' name='orden' value='Cerrar Sesión'>
-</form>
+<form id="botones">
+<div class="form-group mx-sm-3">
+	 <input type='submit' class="col-sm-4" name='orden' value='Subir fichero'> 
+	 <input type='submit' class="col-sm-4" name='orden' value='Modificar sus datos'> 
+	 <input type='submit' class="col-sm-4" name='orden' value='Cerrar Sesión'>
 </div>
+</form>
+
 
 <?php
 // Vacio el bufer y lo copio a contenido

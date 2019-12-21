@@ -19,11 +19,10 @@ ob_start();
     $auto = $_SERVER['PHP_SELF'];    
     ?>
 <div class="grid-container">
-    <?php foreach ($usuarios as $clave => $datosusuario) : ?>
-    		
-    <div class="grid-item"><?= $clave ?></div>
-    	<?php for  ($j=1; $j < count($datosusuario); $j++) :?>
-         <div class="grid-item"><?=$datosusuario[$j] ?></div>
+    <?php foreach ($usuarios as $clave => $datosusuario) : ?>    		
+    	<div class="grid-item"><?= $clave ?></div>
+	<?php for  ($j=1; $j < count($datosusuario); $j++) :?>
+	<div class="grid-item"><?=$datosusuario[$j] ?></div>
     	<?php endfor;?>
     <div class="grid-item"><a href="#"
 		onclick="confirmarBorrar('<?= $datosusuario[1]."','".$clave."'"?>);">
