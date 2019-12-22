@@ -42,3 +42,13 @@ function modeloFileUpFile($archivo,$userId, &$msg){
         }  
         return $resu;
 }
+
+
+function modeloFileBorrar($fichero) {
+    if(unlink($fichero)){
+        return true;
+    }else{
+        return false;
+    }
+    
+}

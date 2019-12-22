@@ -1,8 +1,6 @@
 /**
  * Funciones auxiliares de javascripts 
  */
-$(document).ready(inicializarEventos);
-
 
 function confirmarBorrar(nombre,id){
   if (confirm("¿Quieres eliminar el usuario:  "+nombre+"?"))
@@ -17,6 +15,14 @@ function confirmarModificar(nombre,id){
 	   document.location.href="?orden=Modificar&id="+id;
 	  }
 	}
+
+function BorrarFichero(fichero){
+	
+	  if (confirm("¿Quieres eliminar el fichero:  "+fichero+"?"))
+	  {
+	   document.location.href="?orden=BorrarFichero&fichero="+fichero;
+	  }
+}
 
 function Alta(){
 	document.location.href="?orden=Alta";

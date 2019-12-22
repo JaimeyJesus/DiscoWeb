@@ -20,6 +20,7 @@ $auto = $_SERVER['PHP_SELF'];
 <div class="grid-ficheros">
 <?php 
 $numeroArchivos=0;
+$espacioTotal=0;
 $directorio="app/dat/".$userId;
 if(is_dir($directorio)){
     $gestor=opendir($directorio);
@@ -27,17 +28,17 @@ if(is_dir($directorio)){
         if( $archivo=="." || $archivo==".."){
             continue;
         }
-        
+        $numeroArchivos++;
+        $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
         ?>
         <div class="grid-item"><?= $archivo ?></div>
         <div class="grid-item"><?=substr($archivo,-3) ?></div>
         <div class="grid-item"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
         <div class="grid-item"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
-        <div class="grid-item"><a href="#"onclick="confirmarBorrar('<?= $archivo?>);">Borrar</a></div>
+        <div class="grid-item"><a href="#" onclick="BorrarFichero('<?= $directorio."/".$archivo?>');">Borrar</a></div>
         <div class="grid-item"><a href="<?= $auto?>?orden=Modificar&id=<?= $clave ?>">Renombrar</a></div>
         <div class="grid-item"><a href="<?= $auto?>?orden=Detalles&id=<?= $clave?>">Compartir</a></div>
-        
-        
+               
 <?php
     }
 }
@@ -46,13 +47,17 @@ else{
 }
 
 ?>
-</div>		
+</div>
 
 <form id="botones">
-<div class="form-group mx-sm-3">
-	 <input type='submit' class="col-sm-4" name='orden' value='Subir fichero'> 
-	 <input type='submit' class="col-sm-4" name='orden' value='Modificar sus datos'> 
-	 <input type='submit' class="col-sm-4" name='orden' value='Cerrar Sesión'>
+<div class="form-group mx-sm-4">
+<div class="col-md-3">		
+	<b>Numero de ficheros: <?=$numeroArchivos?></b><br/>
+	<b>Espacio ocupado: <?=$espacioTotal." Kb" ?></b>
+</div>
+	 <input type='submit' class="col-md-3" name='orden' value='Subir fichero'> 
+	 <input type='submit' class="col-md-3" name='orden' value='Modificar sus datos'> 
+	 <input type='submit' class="col-md-3" name='orden' value='Cerrar Sesión'>
 </div>
 </form>
 

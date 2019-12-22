@@ -22,7 +22,8 @@ $rutasUser = [
     "Nuevo"         => "ctlUserNuevo",
     "Cancelar"      => "ctlUserVerUsuarios",
     "Mis Archivos"  => "ctlFileVerFicheros",
-    "Subir fichero" => "ctlFileSubirFichero"
+    "Subir fichero" => "ctlFileSubirFichero",
+    "BorrarFichero" => "ctlFileBorrarFichero"
 ];
 
 

@@ -202,9 +202,9 @@ button{
 
 #botones{
 	padding:2%;
-	padding-left:24%;
+	padding-left:4%;
 	display: grid;
-    grid-template-columns: 40vw;
+    grid-template-columns: 70vw;
     grid-gap: 6%; 
 }
 

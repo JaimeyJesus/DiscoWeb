@@ -39,6 +39,16 @@ function ctlFileCambiarNombreFichero() {
     
 }
 
-function ctlUserBorrarFichero(){
+function ctlFileBorrarFichero(){
+    $msg ="";
+    $fichero=$_GET['fichero'];
+
+    if(modeloFileBorrar($fichero)){
+        $msg="La operación se realizó correctamente.";
+        include_once 'plantilla/verFicheros.php';
+    }else{
+        $msg="No se pudo relaizar la operación.";
+    }
+    
     
 }
