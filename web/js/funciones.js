@@ -16,11 +16,11 @@ function confirmarModificar(nombre,id){
 	  }
 	}
 
-function BorrarFichero(fichero){
+function BorrarFichero(fichero, id){
 	
 	  if (confirm("¿Quieres eliminar el fichero:  "+fichero+"?"))
 	  {
-	   document.location.href="?orden=BorrarFichero&fichero="+fichero;
+	   document.location.href="?orden=Borrar Fichero&fichero="+fichero+"&id="+id;
 	  }
 }
 

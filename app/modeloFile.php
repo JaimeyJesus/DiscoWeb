@@ -36,7 +36,7 @@ function modeloFileUpFile($archivo,$userId, &$msg){
                     $resu = false;
                 }
             } else {
-                $msg .= 'ERROR: No es un directorio correcto o no se tiene permiso de escritura <br />';
+                $msg .= 'ERROR: No es un directorio correcto o no se tiene permiso de escritura'.$directorioSubida.' <br />';
                 $resu = false;
             }
         }  

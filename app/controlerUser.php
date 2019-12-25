@@ -4,6 +4,7 @@
 // ------------------------------------------------
 include_once 'config.php';
 include_once 'modeloUser.php';
+include_once 'controlerFile.php';
 
 
 function  ctlUserInicio(){
@@ -23,7 +24,7 @@ function  ctlUserInicio(){
                 }
                 else {
                    $_SESSION['modo'] = GESTIONFICHEROS;
-                   header('Location:index.php?orden=VerFicheros');
+                   header('Location:index.php?orden=Mis Archivos');
                 }
             }
             else {
@@ -61,6 +62,7 @@ function ctlUserBorrar(){
     }else{
             $msg="No se pudo relaizar la operación.";
         }
+        ctlFileBorrarDir($user);    //al borrar el usuario se borrar también su carpeta de archivos.
         modeloUserSave(); 
         ctlUserVerUsuarios();
     
@@ -102,26 +104,38 @@ function ctlUserAlta(){
 //Comprobamos si hay Post, de ser asi modificamos el usuario, y sino mostramos el formulario de modificación
 function ctlUserModificar(){
     $msg="";
+    //si no hay post, se accede a la plantilla
     if(!isset($_POST['nombre'])){
         $usuarioid=$_GET['id'];
         $usuarios = modeloUserGetAll();
         include_once 'plantilla/Modificar.php';
-        }else{       
+        }else{   
+            //si no hay orden atras, se modifica el usuario    
             if(!isset($_POST['Atrás'])){
                 $usuarioid=$_POST['id'];
                 $usuarios = modeloUserGetAll();
                 $valoresUsuario= [$_POST['clave'] ,$_POST['nombre'],$_POST['email'], $_POST['plan'], $_POST['estado']];
                 if(modeloUserComprobacionesModificar($valoresUsuario, $msg)){
-                modeloUserUpdate($usuarioid, $valoresUsuario);
-                modeloUserSave();
-                ctlUserVerUsuarios();
+                    modeloUserUpdate($usuarioid, $valoresUsuario);
+                    modeloUserSave();
+                    //si es administrador, después de modificar se muestra ver usuarios
+                    if($_SESSION['modo']==GESTIONUSUARIOS){
+                        ctlUserVerUsuarios();
+                    }else{//si es un usuario normal se muestra ver ficheros
+                        ctlFileVerFicheros();
+                    }
                 }else{
                     include_once 'plantilla/Modificar.php';
                 }
-            }else{
+            }else{ 
+                //lo mismo, si es admin o usuario normal, en este caso al darle al botón atrás.
+                if ( $_SESSION['modo'] == GESTIONUSUARIOS){
                 ctlUserVerUsuarios();
+                }else{
+                    ctlFileVerFicheros();
             }
         }
+    }
 }
 
 

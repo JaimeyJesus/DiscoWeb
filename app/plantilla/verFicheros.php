@@ -21,6 +21,15 @@ $auto = $_SERVER['PHP_SELF'];
 <?php 
 $numeroArchivos=0;
 $espacioTotal=0;
+
+//compruebo si hay un id por get(llego a la pantalla desde el login o si por el contrario, llego despues de haber 
+//borrado algún archivo, y rescato el el valor de id pasado por get en la función de borrar)
+if(!isset($_GET['id'])){
+$_GET['id']=$userId;
+}else{
+    $userId=$_GET['id'];
+}
+
 $directorio="app/dat/".$userId;
 if(is_dir($directorio)){
     $gestor=opendir($directorio);
@@ -35,7 +44,7 @@ if(is_dir($directorio)){
         <div class="grid-item"><?=substr($archivo,-3) ?></div>
         <div class="grid-item"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
         <div class="grid-item"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
-        <div class="grid-item"><a href="#" onclick="BorrarFichero('<?= $directorio."/".$archivo?>');">Borrar</a></div>
+        <div class="grid-item"><a href="#" onclick="BorrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">Borrar</a></div>
         <div class="grid-item"><a href="<?= $auto?>?orden=Modificar&id=<?= $clave ?>">Renombrar</a></div>
         <div class="grid-item"><a href="<?= $auto?>?orden=Detalles&id=<?= $clave?>">Compartir</a></div>
                
@@ -49,13 +58,13 @@ else{
 ?>
 </div>
 
-<form id="botones">
+<form id="botones" action="index.php?id=<?$userId?>">
 <div class="form-group mx-sm-4">
 <div class="col-md-3">		
 	<b>Numero de ficheros: <?=$numeroArchivos?></b><br/>
 	<b>Espacio ocupado: <?=$espacioTotal." Kb" ?></b>
 </div>
-	 <input type='submit' class="col-md-3" name='orden' value='Subir fichero'> 
+	 <input type='submit' class="col-md-3" name='orden' value='Subir Fichero'> 
 	 <input type='submit' class="col-md-3" name='orden' value='Modificar sus datos'> 
 	 <input type='submit' class="col-md-3" name='orden' value='Cerrar Sesión'>
 </div>

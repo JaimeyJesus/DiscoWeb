@@ -3,6 +3,9 @@
 // Controlador que realiza la gestión de ficheros de un usuario
 // ---------------------------------------------------------------
 
+include_once 'modeloFile.php';
+include_once 'config.php';
+
 function ctlFileVerFicheros(){
     $usuarios=modeloUserGetAll();
     $userId=$_SESSION['user'];
@@ -31,6 +34,15 @@ function ctlFileSubirFichero(){
     }
 }
 
+function ctlFileModificar(){
+    if(!isset($_POST['nombre'])){
+        $usuarioid=$_SESSION['user'];
+        $usuarios = modeloUserGetAll();
+        include_once 'plantilla/Modificar.php';
+    }
+    
+}
+
 function ctlFileDescargarFichero(){
     
 }
@@ -51,4 +63,13 @@ function ctlFileBorrarFichero(){
     }
     
     
+}
+
+function ctlFileBorrarDir($usuarioid){
+    $carpeta="app\\dat\\".$usuarioid;
+    if(is_dir($carpeta)){
+        rmdir($carpeta);
+        return true;
+    }
+    return false;
 }
