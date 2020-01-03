@@ -10,7 +10,7 @@ function ctlFileVerFicheros(){
     $usuarios=modeloUserGetAll();
     $userId=$_SESSION['user'];
     $user=$usuarios[$userId];
-    $msg="Archivos del usuario: <b>".$userId."</b>";
+    $msg="";
     include_once 'plantilla/verFicheros.php';
 }
 

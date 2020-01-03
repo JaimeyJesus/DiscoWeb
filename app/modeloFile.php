@@ -15,9 +15,9 @@ function modeloFileUpFile($archivo,$userId, &$msg){
     $msg = '';
 
         $directorioSubida = "app/dat/".$userId; 
-        $nombreFichero   =   $archivo['name'];
-        $temporalFichero =   $archivo['tmp_name'];
-        $errorFichero    =   $archivo['error'];
+        $nombreFichero    = $archivo['name'];
+        $temporalFichero  = $archivo['tmp_name'];
+        $errorFichero     = $archivo['error'];
         
         // Obtengo el código de error de la operación, 0 si todo ha ido bien
         if ($errorFichero > 0) {
@@ -27,6 +27,7 @@ function modeloFileUpFile($archivo,$userId, &$msg){
         } else { // subida correcta del temporal
             // si es un directorio y tengo permisos
             if ( is_dir($directorioSubida) && is_writable ($directorioSubida)) {
+                
                 //Intento mover el archivo temporal al directorio indicado
                 if (move_uploaded_file($temporalFichero,  $directorioSubida .'/'. $nombreFichero) == true) {
                     $msg .= 'Archivo guardado en: ' . $directorioSubida .'/'. $nombreFichero . ' <br />';
@@ -36,8 +37,12 @@ function modeloFileUpFile($archivo,$userId, &$msg){
                     $resu = false;
                 }
             } else {
-                $msg .= 'ERROR: No es un directorio correcto o no se tiene permiso de escritura'.$directorioSubida.' <br />';
-                $resu = false;
+                if(!mkdir($directorioSubida, 0777, true)) {
+                    $msg .='Fallo al crear la carpeta';
+                    $resu = FALSE;
+                }
+                chmod($directorioSubida, 0777);
+
             }
         }  
         return $resu;

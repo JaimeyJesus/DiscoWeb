@@ -52,7 +52,7 @@ if(is_dir($directorio)){
     }
 }
 else{
-    echo"El directorio no existe =>".$directorio;
+    echo "<h1>Aun no tienes archivos en la nube</h1><h3>Puedes subir alguno con el botón \"Subir fichero\"</h3>";
 }
 
 ?>

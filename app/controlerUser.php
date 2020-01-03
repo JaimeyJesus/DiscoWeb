@@ -8,13 +8,13 @@ include_once 'controlerFile.php';
 
 
 function  ctlUserInicio(){
-    $msg = "";
-    $user ="";
-    $clave ="";
+    $msg   = "";
+    $user  = "";
+    $clave = "";
     if ( $_SERVER['REQUEST_METHOD'] == "POST"){
         if (isset($_POST['user']) && isset($_POST['clave'])){
-            $user =$_POST['user'];
-            $clave=$_POST['clave'];
+            $user  = $_POST['user'];
+            $clave = $_POST['clave'];
             if ( modeloOkUser($user,$clave)){
                 $_SESSION['user'] = $user;
                 $_SESSION['tipouser'] = modeloObtenerTipo($user);
@@ -78,10 +78,10 @@ function ctlUserAlta(){
         }else{
             //si hay datos enviados por post, y no es el boton de vuelta a atras, doy de alta al usuario
           if(!isset($_POST['atras'])){
-            $msg="";
-            $usuarioid=$_POST['id']; 
-            $passrepetida=$_POST['password2'];
-            $valoresUsuario= [$_POST['password'] ,$_POST['nombre'],$_POST['mail'], $_POST['plan'], $_POST['estado']];
+            $msg = "";
+            $usuarioid      =  $_POST['id']; 
+            $passrepetida   =  $_POST['password2'];
+            $valoresUsuario = [$_POST['password'] ,$_POST['nombre'],$_POST['mail'], $_POST['plan'], $_POST['estado']];
             if(modeloUserComprobacionesNuevo($usuarioid, $valoresUsuario, $passrepetida, $msg)) {//comprueba valores introducidos
                 if(modeloUserNuevo($usuarioid, $valoresUsuario)){
                     $msg="Usuario dado de alta correctamente";
@@ -106,15 +106,15 @@ function ctlUserModificar(){
     $msg="";
     //si no hay post, se accede a la plantilla
     if(!isset($_POST['nombre'])){
-        $usuarioid=$_GET['id'];
-        $usuarios = modeloUserGetAll();
+        $usuarioid = $_GET['id'];
+        $usuarios  = modeloUserGetAll();
         include_once 'plantilla/Modificar.php';
         }else{   
             //si no hay orden atras, se modifica el usuario    
             if(!isset($_POST['Atrás'])){
-                $usuarioid=$_POST['id'];
-                $usuarios = modeloUserGetAll();
-                $valoresUsuario= [$_POST['clave'] ,$_POST['nombre'],$_POST['email'], $_POST['plan'], $_POST['estado']];
+                $usuarioid = $_POST['id'];
+                $usuarios  = modeloUserGetAll();
+                $valoresUsuario = [$_POST['clave'] ,$_POST['nombre'],$_POST['email'], $_POST['plan'], $_POST['estado']];
                 if(modeloUserComprobacionesModificar($valoresUsuario, $msg)){
                     modeloUserUpdate($usuarioid, $valoresUsuario);
                     modeloUserSave();
