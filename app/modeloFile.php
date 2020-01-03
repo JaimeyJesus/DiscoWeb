@@ -37,12 +37,7 @@ function modeloFileUpFile($archivo,$userId, &$msg){
                     $resu = false;
                 }
             } else {
-                if(!mkdir($directorioSubida, 0777, true)) {
-                    $msg .='Fallo al crear la carpeta';
                     $resu = FALSE;
-                }
-                chmod($directorioSubida, 0777);
-
             }
         }  
         return $resu;
