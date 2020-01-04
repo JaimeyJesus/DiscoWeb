@@ -48,7 +48,16 @@ function ctlFileDescargarFichero(){
 }
 
 function ctlFileCambiarNombreFichero() {
+    $fichero=$_GET['fichero'];
+    $userId=$_GET['id'];
+    $NuevoNombre=$userId."/".$_GET['NuevoNombre'];
     
+    if(modeloFileCambiarNombre($fichero, $NuevoNombre)){
+        $msg="La operación se realizó correctamente.";
+        include_once 'plantilla/verFicheros.php';
+    }else{
+        $msg="No se pudo relaizar la operación.";
+    }
 }
 
 function ctlFileBorrarFichero(){
@@ -72,4 +81,9 @@ function ctlFileBorrarDir($usuarioid){
         return true;
     }
     return false;
+}
+
+function ctlFileCompartir(){
+    $archivo=$_GET['fichero'];
+    $userId=$_GET['id'];
 }

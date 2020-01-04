@@ -8,6 +8,7 @@ ob_start();
 <?php  
 $auto = $_SERVER['PHP_SELF'];
 $usuarioM=$usuarios[$_GET['id']];
+$numeroArchivos=0;
 
 ?>
 <div id="detalles">
@@ -19,7 +20,19 @@ $usuarioM=$usuarios[$_GET['id']];
     <li class="list-group-item">Plan <span class="badge"><b><?=$usuarioM[3]?></b></span></li>
     <li class="list-group-item">Número de ficheros 
     	<span class="badge">
-    	<b>0 ficheros</b>
+      <?php
+      $directorio="app/dat/".$_GET['id'];
+      if(is_dir($directorio)){
+      $gestor=opendir($directorio);
+        while(($archivo=readdir($gestor))!==false){
+        if( $archivo=="." || $archivo==".."){
+            continue;
+        }
+        $numeroArchivos++;
+      }
+    }
+        ?>
+    	<b><?=$numeroArchivos?></b>
     	</span>
 	</li>
     <li class="list-group-item">Espacio ocupado <span class="badge">

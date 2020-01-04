@@ -45,8 +45,8 @@ if(is_dir($directorio)){
         <div class="grid-item"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
         <div class="grid-item"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
         <div class="grid-item"><a href="#" onclick="BorrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">Borrar</a></div>
-        <div class="grid-item"><a href="<?= $auto?>?orden=Modificar&id=<?= $clave ?>">Renombrar</a></div>
-        <div class="grid-item"><a href="<?= $auto?>?orden=Detalles&id=<?= $clave?>">Compartir</a></div>
+        <div class="grid-item"><a href="#" onclick="RenombrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">Renombrar</a></div>
+        <div class="grid-item"><a href="app/plantilla/descarga.php?id=<?=$userId?>&archivo=<?=$archivo?>">Descargar</a></div>
                
 <?php
     }

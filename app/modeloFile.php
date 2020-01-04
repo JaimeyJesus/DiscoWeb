@@ -52,3 +52,12 @@ function modeloFileBorrar($fichero) {
     }
     
 }
+
+
+function modeloFileCambiarNombre($fichero, $NuevoNombre){
+    if(is_file($fichero)){
+        rename($fichero, "app/dat/".$NuevoNombre);
+        return true;
+    }
+    return false;
+}

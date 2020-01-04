@@ -24,6 +24,8 @@ $rutasUser = [
     "Mis Archivos"  => "ctlFileVerFicheros",
     "Subir Fichero" => "ctlFileSubirFichero",
     "Borrar Fichero" => "ctlFileBorrarFichero",
+    "Modificar Fichero" => "ctlFileCambiarNombreFichero",
+    "Compartir" => "ctlFileCompartir",
     "Modificar sus datos" => "ctlFileModificar"
 ];
 

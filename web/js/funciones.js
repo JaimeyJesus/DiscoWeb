@@ -24,12 +24,20 @@ function BorrarFichero(fichero, id){
 	  }
 }
 
+function RenombrarFichero(fichero,id){
+	NuevoNombre=prompt("Introduzca el nuevo nombre para el fichero: ");
+	document.location.href="?orden=Modificar Fichero&fichero="+fichero+"&NuevoNombre="+NuevoNombre+"&id="+id;
+}
 function Alta(){
 	document.location.href="?orden=Alta";
 }
 
 function VerArchivos(){
 	document.location.href="?orden=verFicheros";
+}
+
+function Compartir(fichero,id){
+	document.location.href="?orden=Comparir&fichero="+fichero+"&id="+id;
 }
 
 
