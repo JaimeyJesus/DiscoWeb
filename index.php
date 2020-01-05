@@ -7,6 +7,7 @@ include_once 'app/modeloUser.php';
 include_once 'app/modeloFile.php';
 // Inicializo el modelo
 modeloUserInit();
+//pruebas git
 
 // Enrutamiento
 // Relación entre peticiones y función que la va a tratar
