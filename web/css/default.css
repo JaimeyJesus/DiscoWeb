@@ -138,7 +138,7 @@ textarea {
 	margin-top:-4vh;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 55vh 20vh 22vh 21vh 61vh ;
+  	grid-template-columns: 39vh 20vh 22vh 21vh 61vh ;
   	background-color: #5E9C97;
   	padding: 2%;
 }
@@ -147,7 +147,7 @@ textarea {
 	overflow: auto;
 	height:58vh;
   	display: grid;
-  	grid-template-columns: 55vh 20vh 22vh 21vh 21vh 20vh 20vh ;
+  	grid-template-columns: 39vh 20vh 22vh 21vh 21vh 20vh 20vh ;
   	background-color: #5E9C97;
   	padding: 8vh 2%;
   
@@ -186,7 +186,7 @@ input {
 }
 input[type="submit"]{
 
-	margin-rigth:5%;	
+	margin-right:5%;	
 }
 
 button{
@@ -228,5 +228,4 @@ span{
 span b{
 	margin-bottom:-2vh;
 }
-
 
