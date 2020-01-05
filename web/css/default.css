@@ -106,22 +106,31 @@ textarea {
    	resize: none;
 }
 
+.grid-cabecera {
+	height:4vh;
+  	display: grid;
+  	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 15vh 15vh 15vh;
+  	background-color: #5E9C97;
+  	padding: 2%;
+}
+
+.grid-item-cabecera {
+	height:7vh;
+	color:#ffffff;
+  	background-color: #206C66;
+  	border: 1px solid rgba(0, 0, 0, 0.8);
+  	padding: 4%;
+  	font-size: 1em;
+  	text-align: center; 
+}
+
 .grid-container {
 	overflow: auto;
 	height:45vh;
   	display: grid;
-  	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 20vh 20vh 20vh;
+  	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 15vh 15vh 15vh;
   	background-color: #5E9C97;
   	padding: 2%;
-}
-.grid-ficheros {
-	overflow: auto;
-	height:58vh;
-  	display: grid;
-  	grid-template-columns: 55vh 20vh 22vh 21vh 21vh 20vh 20vh ;
-  	background-color: #5E9C97;
-  	padding: 8vh 2%;
-  
 }
 
 .grid-cabecera-ficheros {
@@ -133,30 +142,23 @@ textarea {
   	background-color: #5E9C97;
   	padding: 2%;
 }
-.grid-cabecera {
-	height:4vh;
+
+.grid-ficheros {
+	overflow: auto;
+	height:58vh;
   	display: grid;
-  	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 20vh 20vh 20vh;
+  	grid-template-columns: 55vh 20vh 22vh 21vh 21vh 20vh 20vh ;
   	background-color: #5E9C97;
-  	padding: 2%;
+  	padding: 8vh 2%;
+  
 }
+
 .grid-item {
   	background-color: rgba(255, 255, 255, 0.8);
   	border: 1px solid rgba(0, 0, 0, 0.8);
  	padding: 4%;
   	font-size: 1em;
-  	text-align: center; 
-  	
-}
-
-.grid-item-cabecera {
-	height:7vh;
-	color:#ffffff;
-  	background-color: #206C66;
-  	border: 1px solid rgba(0, 0, 0, 0.8);
-  	padding: 4%;
-  	font-size: 1em;
-  	text-align: center; 
+  	text-align: center; 	
 }
 
 #footer {

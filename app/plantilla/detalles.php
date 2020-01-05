@@ -9,6 +9,7 @@ ob_start();
 $auto = $_SERVER['PHP_SELF'];
 $usuarioM=$usuarios[$_GET['id']];
 $numeroArchivos=0;
+$espacioTotal=0;
 
 ?>
 <div id="detalles">
@@ -29,15 +30,18 @@ $numeroArchivos=0;
             continue;
         }
         $numeroArchivos++;
+        $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
       }
     }
         ?>
     	<b><?=$numeroArchivos?></b>
     	</span>
 	</li>
-    <li class="list-group-item">Espacio ocupado <span class="badge">
-    	<meter min="0" max="100" low="85" high="15" optimum="0" value="45"></meter>
-    </span></li>
+    <li class="list-group-item">Espacio ocupado
+    	<span class="badge">
+    	<meter min="0" max="5000" low="4000" high="200" optimum="0" value="<?=$espacioTotal?>"></meter>
+    	</span>	
+    </li>
   </ul>
 </div>
 

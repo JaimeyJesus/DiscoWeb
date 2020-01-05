@@ -146,7 +146,28 @@ function ctlUserdetalles(){
     include_once 'plantilla/detalles.php';
 }
 
-
+function ctlUserNuevo() {
+    if(!isset($_POST['id'])){
+        include_once 'plantilla/alta.php';
+    }else{
+        $msg = "";
+        $usuarioid      =  $_POST['id'];
+        $passrepetida   =  $_POST['password2'];
+        $valoresUsuario = [$_POST['password'] ,$_POST['nombre'],$_POST['mail'], $_POST['plan'], "B"];
+        if(modeloUserComprobacionesNuevo($usuarioid, $valoresUsuario, $passrepetida, $msg)) {//comprueba valores introducidos
+            if(modeloUserNuevo($usuarioid, $valoresUsuario)){
+                $msg="Usuario dado de alta correctamente";
+                modeloUserSave();
+                modeloUserCrearDir($usuarioid);
+                header('Location:index.php');
+            }else{
+                $msg="No se pudo realizar la operación.";
+            }
+        }else{//si los valores no son correctos se muestra el formulario otra vez
+            include_once 'plantilla/alta.php';
+        }
+    }
+}
 
 
 

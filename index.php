@@ -12,27 +12,32 @@ modeloUserInit();
 // Relación entre peticiones y función que la va a tratar
 // Versión sin POO no manejo de Clases ni objetos
 $rutasUser = [
-    "Inicio"        => "ctlUserInicio",
-    "Alta"          => "ctlUserAlta",
-    "Detalles"      => "ctlUserDetalles",
-    "Modificar"     => "ctlUserModificar",
-    "Borrar"        => "ctlUserBorrar",
-    "Cerrar Sesión" => "ctlUserCerrar",
-    "VerUsuarios"   => "ctlUserVerUsuarios",
-    "Nuevo"         => "ctlUserNuevo",
-    "Cancelar"      => "ctlUserVerUsuarios",
-    "Mis Archivos"  => "ctlFileVerFicheros",
-    "Subir Fichero" => "ctlFileSubirFichero",
-    "Borrar Fichero" => "ctlFileBorrarFichero",
-    "Modificar Fichero" => "ctlFileCambiarNombreFichero",
-    "Compartir" => "ctlFileCompartir",
+    "Inicio"              => "ctlUserInicio",
+    "Alta"                => "ctlUserAlta",
+    "Detalles"            => "ctlUserDetalles",
+    "Modificar"           => "ctlUserModificar",
+    "Borrar"              => "ctlUserBorrar",
+    "Cerrar Sesión"       => "ctlUserCerrar",
+    "VerUsuarios"         => "ctlUserVerUsuarios",
+    "Nuevo"               => "ctlUserNuevo",
+    "Cancelar"            => "ctlUserVerUsuarios",
+    "Mis Archivos"        => "ctlFileVerFicheros",
+    "Subir Fichero"       => "ctlFileSubirFichero",
+    "Borrar Fichero"      => "ctlFileBorrarFichero",
+    "Modificar Fichero"   => "ctlFileCambiarNombreFichero",
+    "Compartir"           => "ctlFileCompartir",
     "Modificar sus datos" => "ctlFileModificar"
 ];
 
 
 // Si no hay usuario a Inicio
 if (!isset($_SESSION['user'])){
-    $procRuta = "ctlUserInicio";
+    if($_GET['orden']=='Nuevo'){
+        $procRuta = "ctlUserNuevo";
+    }else{
+        $procRuta = "ctlUserInicio";
+    }
+    
 } else {
     if ( $_SESSION['modo'] == GESTIONUSUARIOS){
         if (isset($_GET['orden'])){
