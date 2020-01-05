@@ -86,4 +86,5 @@ function ctlFileBorrarDir($usuarioid){
 function ctlFileCompartir(){
     $archivo=$_GET['fichero'];
     $userId=$_GET['id'];
+    include_once 'plantilla/descarga.php';
 }

@@ -33,11 +33,15 @@ $rutasUser = [
 
 // Si no hay usuario a Inicio
 if (!isset($_SESSION['user'])){
-    if($_GET['orden']=='Nuevo'){
-        $procRuta = "ctlUserNuevo";
+    if(isset($_GET['orden'])){
+        if($_GET['orden']=='Nuevo'){
+            $procRuta = "ctlUserNuevo";
+        }else{
+            $procRuta= $rutasUser[$_GET['orden']];
+        }
     }else{
         $procRuta = "ctlUserInicio";
-    }
+}
     
 } else {
     if ( $_SESSION['modo'] == GESTIONUSUARIOS){

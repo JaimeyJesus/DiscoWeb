@@ -24,7 +24,7 @@ ob_start();
 			<option value="3">Máster</option></select>
 
 		<input id="registro" type="submit" name="orden" value="Registrarse">
-		<input type="submit" name="atras" value="atras">
+		<input type="button" name="atras" onclick="Atras()" value="atras">
 	</form>
 </div>    
 <?php 
