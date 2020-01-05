@@ -36,8 +36,12 @@ function VerArchivos(){
 	document.location.href="?orden=verFicheros";
 }
 
-function Compartir(fichero,id){
-	document.location.href="?orden=Comparir&fichero="+fichero+"&id="+id;
+function Descargar(id,fichero){
+	document.location.href="?orden=Compartir&fichero="+fichero+"&id="+id;
+}
+
+function Atras(){
+	document.location.href="?orden=Inicio";
 }
 
 

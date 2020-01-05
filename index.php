@@ -7,6 +7,7 @@ include_once 'app/modeloUser.php';
 include_once 'app/modeloFile.php';
 // Inicializo el modelo
 modeloUserInit();
+//pruebas git
 
 // Enrutamiento
 // Relación entre peticiones y función que la va a tratar
@@ -32,11 +33,15 @@ $rutasUser = [
 
 // Si no hay usuario a Inicio
 if (!isset($_SESSION['user'])){
-    if($_GET['orden']=='Nuevo'){
-        $procRuta = "ctlUserNuevo";
+    if(isset($_GET['orden'])){
+        if($_GET['orden']=='Nuevo'){
+            $procRuta = "ctlUserNuevo";
+        }else{
+            $procRuta= $rutasUser[$_GET['orden']];
+        }
     }else{
         $procRuta = "ctlUserInicio";
-    }
+}
     
 } else {
     if ( $_SESSION['modo'] == GESTIONUSUARIOS){

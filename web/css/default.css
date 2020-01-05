@@ -223,14 +223,10 @@ span{
 	width:20vw;
 	height:5vh;
 	margin-top:-1vh;
-	
 }
 
 span b{
-	margin-top:.5vh;
-	display:inline-block;
-	vertical-align:middle;
-	line-height:normal;
+	margin-bottom:-2vh;
 }
 
 

@@ -48,7 +48,7 @@ if(is_dir($directorio)){
         	<img class="icono" alt="borrar" src="web/img/papelera.png"></a></div>
         <div class="grid-item"><a href="#" onclick="RenombrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">
         	<img class="icono" alt="modificar" src="web/img/editar.png"></a></div>
-        <div class="grid-item"><a href="app/plantilla/descarga.php?id=<?=$userId?>&archivo=<?=$archivo?>">
+        <div class="grid-item"><a href="#" onclick="Descargar('<?=$directorio."','".$archivo."'"?>)">
         	<img class="icono" alt="modificar" src="web/img/compartir.png"></a></div>
                
 <?php
