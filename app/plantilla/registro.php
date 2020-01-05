@@ -23,7 +23,7 @@ ob_start();
 			<option value="2">Premium</option>
 			<option value="3">Máster</option></select>
 
-		<input type="submit" name="orden" value="Registrarse">
+		<input id="registro" type="submit" name="orden" value="Registrarse">
 		<input type="submit" name="atras" value="atras">
 	</form>
 </div>    

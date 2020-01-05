@@ -158,7 +158,7 @@ function ctlUserNuevo() {
             if(modeloUserNuevo($usuarioid, $valoresUsuario)){
                 $msg="Usuario dado de alta correctamente";
                 modeloUserSave();
-                modeloUserCrearDir($usuarioid);
+                modeloUserCrearDir($usuarioid);                 
                 header('Location:index.php');
             }else{
                 $msg="No se pudo realizar la operación.";
