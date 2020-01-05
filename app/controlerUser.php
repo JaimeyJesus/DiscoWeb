@@ -148,7 +148,7 @@ function ctlUserdetalles(){
 
 function ctlUserNuevo() {
     if(!isset($_POST['id'])){
-        include_once 'plantilla/alta.php';
+        include_once 'plantilla/registro.php';
     }else{
         $msg = "";
         $usuarioid      =  $_POST['id'];
@@ -164,7 +164,7 @@ function ctlUserNuevo() {
                 $msg="No se pudo realizar la operación.";
             }
         }else{//si los valores no son correctos se muestra el formulario otra vez
-            include_once 'plantilla/alta.php';
+            include_once 'plantilla/registro.php';
         }
     }
 }
