@@ -22,7 +22,7 @@ for ($j=0; $j < count($usuarioM); $j++){
 	<input type="text" name="nombre" value="<?=(isset($usuarioM[1]))?$usuarioM[1]:''?>">
 		
 	<label for="clave" class="clave">Password</label> 		 
-	<input type="text" name="clave" value="<?=(isset($usuarioM[0]))?$usuarioM[0]:''?>">
+	<input type="password" name="clave" value="<?=(isset($usuarioM[0]))?$usuarioM[0]:''?>">
 
 
 	<label for="correo" class="correo">Correo electronico</label> 		 
