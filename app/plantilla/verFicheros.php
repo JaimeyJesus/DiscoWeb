@@ -41,7 +41,7 @@ if(is_dir($directorio)){
         $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
         ?>
         <div class="grid-item"><?= $archivo ?></div>
-        <div class="grid-item"><?=substr($archivo,-3) ?></div>
+        <div class="grid-item"><?=mime_content_type($directorio."/".$archivo) ?></div>
         <div class="grid-item"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
         <div class="grid-item"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
         <div class="grid-item"><a href="#" onclick="BorrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">

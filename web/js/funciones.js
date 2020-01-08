@@ -25,9 +25,14 @@ function BorrarFichero(fichero, id){
 }
 
 function RenombrarFichero(fichero,id){
-	NuevoNombre=prompt("Introduzca el nuevo nombre para el fichero: ");
+	NuevoNombre=prompt("Introduzca el nuevo nombre para el fichero: ", );
+	if(NuevoNombre==null){
+		NuevoNombre=fichero;
+	}else{
 	document.location.href="?orden=Modificar Fichero&fichero="+fichero+"&NuevoNombre="+NuevoNombre+"&id="+id;
+	}
 }
+	
 function Alta(){
 	document.location.href="?orden=Alta";
 }

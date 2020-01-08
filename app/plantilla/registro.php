@@ -12,11 +12,11 @@ ob_start();
 
 	<?php $auto = $_SERVER['PHP_SELF'];?>
 
-		Identificador <input type="text" name="id" >
-		Nombre <input type="text" name="nombre" >
-		Correo Electrónico <input type="text" name="mail" >
-		Contraseña <input type="password" name="password" >
-		Repita contraseña <input type="password" name="password2" >
+		Identificador <input type="text" name="id" value="<?=(isset($_POST['id']))?$_POST['id']:""?>" >
+		Nombre <input type="text" name="nombre" value="<?=(isset($_POST['nombre']))?$_POST['nombre']:""?>">
+		Correo Electrónico <input type="text" name="mail" value="<?=(isset($_POST['mail']))?$_POST['mail']:""?>">
+		Contraseña <input type="password" name="password" value="<?=(isset($_POST['password']))?$_POST['password']:""?>">
+		Repita contraseña <input type="password" name="password2" value="<?=(isset($_POST['password2']))?$_POST['password2']:""?>">
 		Plan <select name="plan">
 			<option value="0">Básico</option>
 			<option value="1">Profesional</option>

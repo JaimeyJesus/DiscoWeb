@@ -56,7 +56,9 @@ function modeloFileBorrar($fichero) {
 
 function modeloFileCambiarNombre($fichero, $NuevoNombre){
     if(is_file($fichero)){
-        rename($fichero, "app/dat/".$NuevoNombre);
+        $arrayExtension=explode('.',$fichero);
+        $extension=end($arrayExtension);
+        rename($fichero, "app/dat/".$NuevoNombre.'.'.$extension);
         return true;
     }
     return false;
