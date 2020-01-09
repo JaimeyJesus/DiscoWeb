@@ -4,26 +4,39 @@
 
 ob_start();
 ?>
-<h1>Formulario de acceso</h1>
 
 <div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
-<div id="divFormularioAcceso">
+
 <form method="GET" action="">
-<a href="index.php?orden=Nuevo">Registrarse</a>
-</form>
-<form name='ACCESO' method="POST" action="index.php">
-	<label>Usuario</label>
-	<input type="text" name="user" value="<?= $user ?>">
 
-	<label>Contraseña</label>
-	<input type="password" name="clave" value="<?= $clave ?>">
-
-	<button name="orden" value="Entrar">Entrar</button>
-		
 </form>
 
-</div>
-
+<div class="container">
+  <h2>Formulario de acceso</h2>
+  
+  <form name='ACCESO' method="POST" action="index.php" class="needs-validation" novalidate>
+	<div class="row">
+		<div class="col">
+			<div class="form-group">
+				<label for="user">Usuario:</label>
+				<input type="text" class="form-control" id="user" name="user" required
+				value="<?= $user ?>">
+				<div class="valid-feedback">OK</div>
+				<div class="invalid-feedback">Por favor, introduzca nombre de usuario</div>
+			</div>
+			<div class="form-group">
+				<label for="clave">Contraseña:</label>
+				<input type="password" class="form-control" id="clave" name="clave" required
+				value="<?= $clave ?>">
+				<div class="valid-feedback">OK</div>
+				<div class="invalid-feedback">Por favor, introduzca la contraeña</div>
+			</div>
+			<div class="form-group">
+			<a href="index.php?orden=Nuevo">Registrarse</a>
+			<div class="form-group">
+			<button name="orden" class="btn btn-primary" value="Entrar">Entrar</button>
+		</div>
+	</div>
 <?php 
 
 $contenido = ob_get_clean();
