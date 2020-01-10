@@ -80,13 +80,15 @@ for ($j=0; $j < count($usuarioM); $j++){
     			<option value="I"<?=($usuarioM[4]=='Inactivo')?'selected':''?>>Inactivo</option>
 			</select>
 		</div>
+</div>
+</div>
 	<div class="row">
 		<div class="col">
     		<button type="submit" class="btn btn-primary" name="Modificar" id="Modificar" value="Modificar"
 			onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">Modificar</button>
-		</div>
+		</div>	
 		<div class="col">
-			<input type="cancel" <?php 
+			<input type="cancel"<?php 
 			if($_SESSION['modo']==GESTIONUSUARIOS){?>
 			onclick="javascript:document.location='index.php'" <?php
 			}else{?>

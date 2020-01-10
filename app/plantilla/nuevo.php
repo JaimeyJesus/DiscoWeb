@@ -84,10 +84,13 @@ ob_start();
 			</select>
 		</div>
 	</div>
+</div>
     <div class="row">	
-		<div class="col">       
-    		<button type="submit" class="btn btn-primary" name="orden" id="alta" value="Alta">Submit</button>
-			<button name="atras" class="btn btn-primary"  id="atras" onclick="VolverListaUsuarios()" value="atras">Atras</button>
+	<div class="col">       
+		<button type="submit" class="btn btn-primary" name="orden" id="alta" value="Alta">Registro</button>
+	</div>
+	<div class="col">  
+		<button name="atras" class="btn btn-primary"  id="atras" onclick="VolverListaUsuarios()" value="atras">Atrás</button>
 		</div>
 	</div>
   </form>
