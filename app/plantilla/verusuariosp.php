@@ -3,6 +3,22 @@
 ob_start();
 
 ?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?orden=Mis Archivos">Mis Archivos <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?orden=Alta">Nuevo usuario</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?orden=Cerrar Sesión">Cerrar sesión</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
 <?=(isset($msg))?'<p>'.$msg.'</p>':''?>
 
 <div class="grid-cabecera">
@@ -37,13 +53,6 @@ ob_start();
 
 
 <?php endforeach; ?>
-</div>
-<div class="botones">
-<form action='index.php'>
-	<input type='submit' name='orden' value='Cerrar Sesión'> 
-	<input type='submit' name='orden' value='Alta'> 
-	<input type='submit' name='orden' value='Mis Archivos'> 
-</form>
 </div>
 <?php
 

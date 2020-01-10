@@ -10,48 +10,53 @@ $auto = $_SERVER['PHP_SELF'];
 $usuarioM=$usuarios[$_GET['id']];
 $numeroArchivos=0;
 $espacioTotal=0;
-
+$directorio="app/dat/".$_GET['id'];
+if(is_dir($directorio)){
+$gestor=opendir($directorio);
+  while(($archivo=readdir($gestor))!==false){
+  if( $archivo=="." || $archivo==".."){
+      continue;
+  }
+  $numeroArchivos++;
+  $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
+}
+}
 ?>
-<div id="detalles">
+
 <div class="container">
-<h1>Detalles de <?=$_GET['id']?></h1>
-  <ul class="list-group">
-    <li class="list-group-item">Nombre <span class="badge"><b><?=$usuarioM[1]?></b></span></li>
-    <li class="list-group-item">Correo electrónico <span class="badge"><b><?=$usuarioM[2]?></b></span></li>
-    <li class="list-group-item">Plan <span class="badge"><b><?=$usuarioM[3]?></b></span></li>
-    <li class="list-group-item">Número de ficheros 
-    	<span class="badge">
-      <?php
-      $directorio="app/dat/".$_GET['id'];
-      if(is_dir($directorio)){
-      $gestor=opendir($directorio);
-        while(($archivo=readdir($gestor))!==false){
-        if( $archivo=="." || $archivo==".."){
-            continue;
-        }
-        $numeroArchivos++;
-        $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
-      }
-    }
-        ?>
-    	<b><?=$numeroArchivos?></b>
-    	</span>
-	</li>
-    <li class="list-group-item">Espacio ocupado
-    	<span class="badge">
-    	<meter min="0" max="5000" low="4000" high="200" optimum="0" value="<?=$espacioTotal?>"></meter>
-    	</span>	
-    </li>
-  </ul>
+<h2>Detalles de <?=$_GET['id']?></h2>
+  <div class="row">
+    <div class="col">Nombre</div>
+    <div class="col"><?=$usuarioM[1]?></div>
+  </div>
+  <div class="row">
+    <div class="col">Email</div>
+    <div class="col"><?=$usuarioM[2]?></div>
+  </div>
+  <div class="row">
+    <div class="col">Plan</div>
+    <div class="col"><?=$usuarioM[3]?></div>
+  </div>
+  <div class="row">
+    <div class="col">Número de ficheros</div>
+    <div class="col"><?=$numeroArchivos?></div>
+  </div>
+  <div class="row">
+    <div class="col">Espacio ocupado</div>
+    <div class="col"><meter min="0" max="10000" low="5000" high="1000" optimum="0" value="<?=$espacioTotal?>"></meter></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <form action="index.php" method="POST" id="formularioDetalles">
+	      <input type="submit" name="VerUsuarios" value="Volver">
+      </form>  
+    </div>
+  </div>
 </div>
 
-<form action="index.php" method="POST">
-	<input type="submit" name="VerUsuarios" value="Volver">
-</form>       
-</div>
+     
+
 <?php 
-
 $contenido = ob_get_clean();
 include_once "principal.php";
-
 ?>

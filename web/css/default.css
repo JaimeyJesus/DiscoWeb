@@ -10,20 +10,23 @@ body {
   background-attachment:fixed;
 }
 
+nav{
+	height: 8vh;
+}
 #container {	
 	position:fixed;
-	margin: 1vh auto 1vh 5vw;
-	width: 90%;
-	height:87%;
+	margin: 1vh auto 1vh 1vw;
+	width: 94%;
+	height:89%;
 	background: rgba(255, 255, 255, 0.5);
 	border: solid 1px;
-	padding: 20px;
+	padding: 1%;
 }
 
 #header {
 	background: #3A847E;
 	text-align: center;
-	padding: 10px;
+	padding: 0%;
 	color: white;
 	text-shadow: black 0.1em 0.1em 0.2em;
 }
@@ -32,7 +35,7 @@ h1{
 	text-align:center;
 }
 #header h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	margin: 0;
 }
 #header h2 {
@@ -44,7 +47,7 @@ h1{
 	height:100%;
   	background: #5E9C97;;
   	clear: left;
-  	padding: 6px;
+  	padding: 2%;
 }
 
 #content h2 {
@@ -58,7 +61,7 @@ h1{
 	color: red;
 }
 
-#divFormularioAcceso{
+#divSubirFichero{
 	margin-left:15vw;
 	margin-top:12vh;
 	width:55vw;
@@ -67,35 +70,15 @@ h1{
 	padding:2%;
 }
 
-#divFormularioNuevo{
-	margin-left:5vw;
-	margin-top:2vh;
-	width:55vw;
-	height:76vh;
-	border:1px solid #757E82;
-	padding:2%;
-}
-
-#divFormularioModificar{
-	margin-left:15vw;
-	margin-top:2vh;
-	width:55vw;
-	height:65vh;
-	border:1px solid #757E82;
-	padding:2%;
-}
-
-li {
-  	padding: 18px;
-}
 
 #aviso {
 	background: red;
 	color: black;
 }
 
-#detalles{
-	width:30vw;
+#formularioDetalles{
+	margin-left: -50vw;
+	margin-top: 20vh;
 }
 
 a {
@@ -126,7 +109,7 @@ textarea {
 
 .grid-container {
 	overflow: auto;
-	height:45vh;
+	height:55vh;
   	display: grid;
   	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 15vh 15vh 15vh;
   	background-color: #5E9C97;
@@ -134,29 +117,31 @@ textarea {
 }
 
 .grid-cabecera-ficheros {
-	position:absolute;
-	margin-top:-4vh;
+	position: fixed;
+	margin-top:-10vh;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 39vh 20vh 22vh 21vh 61vh ;
+  	grid-template-columns: 55vh 40vh 22vh 21vh 45vh ;
   	background-color: #5E9C97;
-  	padding: 2%;
+  	padding: 1%;
 }
 
 .grid-ficheros {
 	overflow: auto;
-	height:58vh;
+	height:52vh;
   	display: grid;
-  	grid-template-columns: 39vh 20vh 22vh 21vh 21vh 20vh 20vh ;
-  	background-color: #5E9C97;
-  	padding: 8vh 2%;
+  	grid-template-columns: 55vh 40vh 22vh 21vh 15vh 15vh 15vh ;
+	background-color: #5E9C97;
+	padding: 1%;
+	margin-top: 10vh;
+  	
   
 }
 
 .grid-item {
   	background-color: rgba(255, 255, 255, 0.8);
   	border: 1px solid rgba(0, 0, 0, 0.8);
- 	padding: 4%;
+ 	padding: 3%;
   	font-size: 1em;
   	text-align: center; 	
 }
@@ -171,18 +156,19 @@ textarea {
 }
 
 form {
-	width: 50vw;
+	width: 90vw;
     display: grid;
-    grid-template-columns: 10vw;
-    grid-gap: 6%;  
+    grid-template-columns: 50vw;
+	grid-gap: 0.5%;  
+	margin-left: 15vw;
 }
 
 label {
-    grid-column: 1 / 2;
+    grid-column: 3 / 3;
 }
  
 input {
-    grid-column: 2 / 2;
+    grid-column: 3 / 3;
 }
 input[type="submit"]{
 
@@ -190,7 +176,7 @@ input[type="submit"]{
 }
 
 button{
-	grid-column: 1 / 2;
+	grid-column: 2 / 2;
 }
 
 .wrapper {
@@ -214,18 +200,21 @@ ul{
 	margin-left:10vw;
 	margin-right:10vw;
 }
+
+li{
+	width: 20vw;
+}
 meter{
 	width:19vw;
 	height:3vh;
 	margin-top:.5vh;
 }
+
 span{
-	width:20vw;
-	height:5vh;
-	margin-top:-1vh;
+	border: #000 1px solid;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 1%;
+	color: rgb(15, 92, 85);
 }
 
-span b{
-	margin-bottom:-2vh;
-}
 

@@ -2,10 +2,24 @@
 // Guardo la salida en un buffer(en memoria)
 // No se envia al navegador
 ob_start();
-
 ?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?orden=Subir Fichero">Subir fichero<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?orden=Modificar sus datos">Modificar datos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?orden=Cerrar Sesión">Cerrar sesión</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <?=(isset($msg))?'<p>'.$msg.'</p>':''?>
-
+<div class="container">
 <div class="grid-cabecera-ficheros">
     <div class="grid-item-cabecera"><b>Nombre</b></div>
     <div class="grid-item-cabecera"><b>Tipo</b></div>
@@ -62,18 +76,13 @@ else{
 </div>
 
 <form id="botones" action="index.php?id=<?$userId?>">
-<div class="form-group mx-sm-4">
-<div class="col-md-3">		
-	<b>Numero de ficheros: <?=$numeroArchivos?></b><br/>
-	<b>Espacio ocupado: <?=$espacioTotal." Kb" ?></b>
-</div>
-	 <input type='submit' class="col-md-3" name='orden' value='Subir Fichero'> 
-	 <input type='submit' class="col-md-3" name='orden' value='Modificar sus datos'> 
-	 <input type='submit' class="col-md-3" name='orden' value='Cerrar Sesión'>
+<div class="col-md-6">		
+	<span>Numero de ficheros: <?=$numeroArchivos?></span>
+	<span>Espacio ocupado: <?=$espacioTotal." Kb" ?></span>
 </div>
 </form>
 
-
+</div>
 <?php
 // Vacio el bufer y lo copio a contenido
 // Para que se muestre en div de contenido de la página principal

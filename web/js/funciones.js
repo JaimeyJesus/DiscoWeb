@@ -49,6 +49,9 @@ function Atras(){
 	document.location.href="?orden=Inicio";
 }
 
+function VolverListaUsuarios(){
+	document.location.href="?orden=VerUsuarios";
+}
 
 
 
