@@ -11,7 +11,11 @@ ob_start();
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?orden=Modificar sus datos">Modificar datos</a>
+      </li><?php if($_SESSION['modo']==GESTIONUSUARIOS){?>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?orden=VerUsuarios">Volver a administración</a>
       </li>
+      <?php } ?>
       <li class="nav-item">
         <a class="nav-link" href="index.php?orden=Cerrar Sesión">Cerrar sesión</a>
       </li>
