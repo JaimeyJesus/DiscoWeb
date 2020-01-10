@@ -121,7 +121,7 @@ textarea {
 	margin-top:-10vh;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 30vh 30vh 22vh 21vh 45vh ;
+  	grid-template-columns: 30vh 40vh 22vh 21vh 45vh ;
   	background-color: #5E9C97;
   	padding: 1%;
 }
@@ -130,7 +130,7 @@ textarea {
 	overflow: auto;
 	height:52vh;
   	display: grid;
-  	grid-template-columns: 30vh 30vh 22vh 21vh 15vh 15vh 15vh;
+  	grid-template-columns: 30vh 40vh 22vh 21vh 15vh 15vh 15vh;
 	background-color: #5E9C97;
 	padding: 1%;
 	margin-top: 10vh;
@@ -216,5 +216,7 @@ span{
 	padding: 1%;
 	color: rgb(15, 92, 85);
 }
-
+#accionIcono, #accionIcono2, #accionIcono3{
+	display:none;
+}
 
