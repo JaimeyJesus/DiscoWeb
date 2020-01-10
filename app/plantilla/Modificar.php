@@ -86,7 +86,12 @@ for ($j=0; $j < count($usuarioM); $j++){
 			onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">Modificar</button>
 		</div>
 		<div class="col">
-			<button name="orden" class="btn btn-primary"  id="atras" value="Atrás">Atras</button>
+			<input type="cancel" <?php 
+			if($_SESSION['modo']==GESTIONUSUARIOS){?>
+			onclick="javascript:document.location='index.php'" <?php
+			}else{?>
+			onclick="VerArchivos()" <?php }  ?>
+			name="orden" class="btn btn-primary"  id="atras" value="Atrás">
 		</div>
 	</div>
   </form>
