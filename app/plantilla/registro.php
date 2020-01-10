@@ -66,7 +66,7 @@ ob_start();
 	<div class="row">
 		<div class="col">
 			<div class="form-group">
-			<label for="password2">Plan:</label>
+			<label for="plan">Plan:</label>
 			<select name="plan" class="form-control">
     			<option value="0">Básico</option>
     			<option value="1">Profesional</option>
@@ -77,11 +77,10 @@ ob_start();
 	</div>
 	<div class="row">
 		<div class="col">
-    		<button type="submit" class="btn btn-primary" name="orden" id="registro" value="Registrarse">Submit</button>
+    		<button type="submit" class="btn btn-primary" name="orden" id="registro" value="Registrarse">Registro</button>
 		</div>
 		<div class="col">
 			<button name="atras" class="btn btn-primary"  id="atras" onclick="Atras()" value="atras">Atras</button>
-			<input type="submit" name="atras" value="atras" onclick="Atras()">
 		</div>
 	
   </form>

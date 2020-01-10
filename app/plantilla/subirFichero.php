@@ -3,16 +3,24 @@
 // No se envia al navegador
 ob_start();
 ?>
-
-<h1>Subida de ficheros</h1>
 <div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
-<div id="divFormularioAcceso">
-<form name="f1" enctype="multipart/form-data" action="index.php?orden=Subir Fichero" method="post">
-<input type="hidden" name="MAX_FILE_SIZE" value="199999990" />
-<label>Elija el archivo a subir</label> <input name="archivo" type="file" /> <br />
-<input type="submit" value="Subir fichero" />
-</form>
+<div class="container">
+  <h2>Subir fichero</h2>
+  <div id="divSubirFichero">
+  <form name="f1" enctype="multipart/form-data" action="index.php?orden=Subir Fichero" method="post">
+	<div class="row">
+        <input type="hidden" name="MAX_FILE_SIZE" value="199999990" />
+        <label for="archivo">Elija el archivo a subir</label>
+    </div>
+    <div class="row">
+        <input name="archivo" type="file"/>
+    </div>
+    <div class="row">
+        <input type="submit" value="Subir fichero" />
+    </div>
+  </form>
 </div>
+
 <?php 
 
 $contenido = ob_get_clean();

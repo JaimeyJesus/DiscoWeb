@@ -2,49 +2,93 @@
 // No se envia al navegador
 ob_start();
 ?>
-<h1>Modificación de usuario</h1>
 <div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
-<div id="divFormularioModificar">
-<form action="index.php?orden=Modificar" method="POST">
 <?php  
 $auto = $_SERVER['PHP_SELF'];
 $usuarioM=$usuarios[$usuarioid];
-/* identificador => Nombre, email, plan y Estado
-*/
+
 for ($j=0; $j < count($usuarioM); $j++){
 }
 ?>
-	<label for="id" class="id">Id</label> 		 
-	<input type="text" name="id" value="<?=(isset($usuarioid))?$usuarioid:''?>" readonly >
 
+<div class="container">
+  <h2>Formulario de modificación</h2>
+  
+  <form action="index.php?orden=Modificar" method="POST" class="needs-validation" novalidate>
+	<div class="row">
+		<div class="col">
+			<div class="form-group">
+				<label for="id">Identificador:</label>
+				<input type="text" class="form-control" id="id" placeholder="Introduzca un identificador" name="id" required
+				value="<?=(isset($usuarioid))?$usuarioid:''?>" readonly>
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Por favor, introduzca un identificador</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="form-group">
+				<label for="nombre">Nombre:</label>
+				<input type="text" class="form-control" id="nombre" placeholder="Introduzca un nombre" name="nombre" required
+				value="<?=(isset($usuarioM[1]))?$usuarioM[1]:''?>">
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Por favor, introduzca un nombre</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group">
+				<label for="mail">Email:</label>
+				<input type="mail" class="form-control" id="email" placeholder="Ejemplo@ejemplo.com" name="email" required
+				value="<?=(isset($usuarioM[2]))?$usuarioM[2]:''?>">
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Por favor, introduzca un email</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group">
+				<label for="clave">Contraseña:</label>
+				<input type="password" class="form-control" id="clave" name="clave" required
+				value="<?=(isset($usuarioM[0]))?$usuarioM[0]:''?>">
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Por favor, introduzca una contraseña</div>
+			</div>
+		</div>
 
-	<label for="nombre" class="nombre">Nombre</label> 		 
-	<input type="text" name="nombre" value="<?=(isset($usuarioM[1]))?$usuarioM[1]:''?>">
-		
-	<label for="clave" class="clave">Password</label> 		 
-	<input type="text" name="clave" value="<?=(isset($usuarioM[0]))?$usuarioM[0]:''?>">
-
-
-	<label for="correo" class="correo">Correo electronico</label> 		 
-	<input type="text" name="email" value="<?=(isset($usuarioM[2]))?$usuarioM[2]:''?>">
-
-	Plan <select name="plan">
-    <option value="0" <?=($usuarioM[3]=='Básico')?'selected':''?>>Básico</option>
-    <option value="1" <?=($usuarioM[3]=='Profesional')?'selected':''?>>Profesional</option>
-    <option value="2" <?=($usuarioM[3]=='Premium')?'selected':''?>>Premium</option>
-    <option value="3" <?=($usuarioM[3]=='Máster')?'selected':''?>>Máster</option></select>
-    
-Estado <select name="estado">
-    <option value="A"<?=($usuarioM[4]=='Activo')?'selected':''?>>Activo</option>
-    <option value="B"<?=($usuarioM[4]=='Bloqueado')?'selected':''?>>Bloqueado</option>
-    <option value="I"<?=($usuarioM[4]=='Inactivo')?'selected':''?>>Inactivo</option></select>
-
-	<input name="Modificar" type="submit" value="Modificar" 
-	onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">
-	<input type="submit" name="orden" value="Atrás">
-
-
-</form>       
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group">
+			<label for="plan">Plan:</label>
+			<select name="plan" class="form-control">
+    			<option value="0" <?=($usuarioM[3]=='Básico')?'selected':''?>>Básico</option>
+    			<option value="1" <?=($usuarioM[3]=='Profesional')?'selected':''?>>Profesional</option>
+    			<option value="2" <?=($usuarioM[3]=='Premium')?'selected':''?>>Premium</option>
+    			<option value="3" <?=($usuarioM[3]=='Máster')?'selected':''?>>Máster</option>
+			</select>
+			</div>
+		</div>
+		<div class="col">
+			<div class="form-group">
+			<label for="estado">Estado:</label>
+			<select name="estado" class="form-control">
+				<option value="A"<?=($usuarioM[4]=='Activo')?'selected':''?>>Activo</option>
+    			<option value="B"<?=($usuarioM[4]=='Bloqueado')?'selected':''?>>Bloqueado</option>
+    			<option value="I"<?=($usuarioM[4]=='Inactivo')?'selected':''?>>Inactivo</option>
+			</select>
+		</div>
+	<div class="row">
+		<div class="col">
+    		<button type="submit" class="btn btn-primary" name="Modificar" id="Modificar" value="Modificar"
+			onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">Modificar</button>
+		</div>
+		<div class="col">
+			<button name="orden" class="btn btn-primary"  id="atras" value="Atrás">Atras</button>
+		</div>
+	</div>
+  </form>
 </div>
 <?php 
 $contenido = ob_get_clean();
