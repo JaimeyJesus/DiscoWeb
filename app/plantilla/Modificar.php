@@ -85,7 +85,7 @@ for ($j=0; $j < count($usuarioM); $j++){
 			onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">Modificar</button>
 		</div>
 		<div class="col">
-			<button name="orden" class="btn btn-primary"  id="atras" value="Atrás">Atras</button>
+			<input type="button" name="orden" class="btn btn-primary" onclick="javascript:window.location='index.php'" id="atras" value="Atrás">
 		</div>
 	</div>
   </form>
