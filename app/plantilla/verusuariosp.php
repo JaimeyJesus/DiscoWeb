@@ -42,13 +42,13 @@ ob_start();
     	<?php endfor;?>
     <div class="grid-item"><a href="#"
 		onclick="confirmarBorrar('<?= $datosusuario[1]."','".$clave."'"?>);">
-		<img class="icono" alt="borrar" src="web/img/papelera.png"></a>
+		<img class="icono" id="icono" alt="borrar" src="web/img/papelera.png"></a><div id="accionIcono"><p>Borrar</p></div>
 	</div>
     <div class="grid-item"><a href="<?= $auto?>?orden=Modificar&id=<?= $clave ?>">
-    	<img class="icono" alt="modificar" src="web/img/editar.png"></a>
+    	<img class="icono" id="icono2" alt="modificar" src="web/img/editar.png"></a><div id="accionIcono2"><p>Modificar</p></div>
 	</div>
     <div class="grid-item"><a href="<?= $auto?>?orden=Detalles&id=<?= $clave?>">
-    	<img class="icono" alt="detalles" src="web/img/ojo.png"></a>
+    	<img class="icono" id="icono3" alt="detalles" src="web/img/ojo.png"></a><div id="accionIcono3"><p>Ver detalles</p></div>
 	</div>
 
 

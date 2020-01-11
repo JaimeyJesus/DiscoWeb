@@ -1,6 +1,6 @@
 $(document).ready(InicializarEventos);
 function InicializarEventos(){
-    var x=$(".icono");
+    var x=$("#icono");
     var z=$("#icono2");
     var y=$("#icono3");
     x.hover(entraMouse);

@@ -63,7 +63,7 @@ if(is_dir($directorio)){
         <div class="grid-item"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
         <div class="grid-item"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
         <div class="grid-item"><a href="#" onclick="BorrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">
-        	<img class="icono" alt="borrar" src="web/img/papelera.png"></a><div id="accionIcono"><p>Borrar</p></div></div>
+        	<img class="icono" id="icono" alt="borrar" src="web/img/papelera.png"></a><div id="accionIcono"><p>Borrar</p></div></div>
         <div class="grid-item"><a href="#" onclick="RenombrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">
         	<img class="icono" id="icono2" alt="modificar" src="web/img/editar.png"></a><div id="accionIcono2"><p>Renombrar</p></div></div>
         <div class="grid-item"><a href="#" onclick="Descargar('<?=$directorio."','".$archivo."'"?>)">
