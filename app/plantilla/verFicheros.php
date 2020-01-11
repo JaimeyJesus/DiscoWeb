@@ -58,7 +58,7 @@ if(is_dir($directorio)){
         $numeroArchivos++;
         $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
         ?>
-        <div class="grid-item"><?= $archivo ?></div>
+        <div class="grid-item"><a id="Descarga" href="#" onclick="Descargar('<?=$directorio."','".$archivo."'"?>)"><?= $archivo ?></a><div id="accionDescarga"><p>Descargar archivo</p></div></div>
         <div class="grid-item"><?=mime_content_type($directorio."/".$archivo) ?></div>
         <div class="grid-item"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
         <div class="grid-item"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
@@ -66,8 +66,8 @@ if(is_dir($directorio)){
         	<img class="icono" id="icono" alt="borrar" src="web/img/papelera.png"></a><div id="accionIcono"><p>Borrar</p></div></div>
         <div class="grid-item"><a href="#" onclick="RenombrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">
         	<img class="icono" id="icono2" alt="modificar" src="web/img/editar.png"></a><div id="accionIcono2"><p>Renombrar</p></div></div>
-        <div class="grid-item"><a href="#" onclick="Descargar('<?=$directorio."','".$archivo."'"?>)">
-        	<img class="icono" id="icono3" alt="modificar" src="web/img/compartir.png"></a><div id="accionIcono3"><p>Descargar</p></div></div>
+        <div class="grid-item"><a href="#" onclick="Compartir('<?=$directorio."','".$archivo."'"?>)">
+        	<img class="icono" id="icono3" alt="modificar" src="web/img/compartir.png"></a><div id="accionIcono3"><p>Compartir</p></div></div>
                
 <?php
     }
