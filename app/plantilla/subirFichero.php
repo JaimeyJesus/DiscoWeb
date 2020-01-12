@@ -6,18 +6,38 @@ ob_start();
 <div id='aviso'><b><?= (isset($msg))?$msg:"" ?></b></div>
 <div class="container">
   <h2>Subir fichero</h2>
-  <div id="divSubirFichero">
+  
   <form name="f1" enctype="multipart/form-data" action="index.php?orden=Subir Fichero" method="post">
-	<div class="row">
+	  <div class="row">
+      <div class="col">
         <input type="hidden" name="MAX_FILE_SIZE" value="199999990" />
-        <label for="archivo">Elija el archivo a subir</label>
+      </div>
     </div>
+
     <div class="row">
-        <input name="archivo" type="file"/>
+      <div class="col">
+        <div class="form-group">
+          <input name="archivo" type="file" id="subirArchivo"/>      
+        </div>
+      </div>
     </div>
+
     <div class="row">
-        <input type="submit" value="Subir fichero" />
+      <div class="col">
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary"  value="Subir fichero" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+        <input type="button" name="atras" class="btn btn-primary"  id="atras" onclick="Atras()" value="Atrás">
+        </div>
+      </div>
     </div>
+
+
+
+    
   </form>
 </div>
 

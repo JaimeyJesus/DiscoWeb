@@ -12,8 +12,16 @@ body {
 
 nav{
 	height: 8vh;
+	width: 88vw;
 }
-#container {	
+#menu{
+	background-color: #3A847E;
+	margin-top: -1.5%;
+	font-size: 1.2rem;
+	text-align: center;
+	color: #ffffff;
+}
+#container {		
 	position:fixed;
 	margin: 1vh auto 1vh 1vw;
 	width: 94%;
@@ -47,7 +55,8 @@ h1{
 	height:100%;
   	background: #5E9C97;;
   	clear: left;
-  	padding: 2%;
+	padding: 2%;
+	
 }
 
 #content h2 {
@@ -89,12 +98,14 @@ textarea {
    	resize: none;
 }
 
-.grid-cabecera {
+/* Pantalla de usuarios */
+.grid-cabecera-usuarios {
+	position: fixed;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 15vh 15vh 15vh;
+  	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 8vw 8vw 8vw;
   	background-color: #5E9C97;
-  	padding: 2%;
+  	padding-top: .5vw;
 }
 
 .grid-item-cabecera {
@@ -107,13 +118,15 @@ textarea {
   	text-align: center; 
 }
 
-.grid-container {
+.container-usuarios {
 	overflow: auto;
 	height:55vh;
   	display: grid;
-  	grid-template-columns: 25vh 25vh 30vh 21vh 21vh 15vh 15vh 15vh;
+  	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 8vw 8vw 8vw;
   	background-color: #5E9C97;
-  	padding: 2%;
+	border: #000 solid 1px;
+	margin-top: 10vh;
+	color: #000000;
 }
 
 .grid-cabecera-ficheros {
@@ -121,21 +134,24 @@ textarea {
 	margin-top:-10vh;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 55vh 40vh 22vh 21vh 45vh ;
+  	grid-template-columns: 23vw 12.3vw 10vw 8vw 27vw ;
   	background-color: #5E9C97;
-  	padding: 1%;
+  	padding-top: .5vw;
 }
 
 .grid-ficheros {
-	overflow: auto;
+	overflow-y: auto;
 	height:52vh;
   	display: grid;
-  	grid-template-columns: 55vh 40vh 22vh 21vh 15vh 15vh 15vh ;
+  	grid-template-columns: 23vw 12.3vw 10vw 8vw 9vw 9vw 9vw ;
 	background-color: #5E9C97;
-	padding: 1%;
+	border: #000 solid 1px;
 	margin-top: 10vh;
-  	
-  
+	color: #000000;	
+}
+
+#hueco{
+	background-color: #000;
 }
 
 .grid-item {
@@ -143,7 +159,11 @@ textarea {
   	border: 1px solid rgba(0, 0, 0, 0.8);
  	padding: 3%;
   	font-size: 1em;
-  	text-align: center; 	
+	text-align: center; 
+	overflow:hidden;
+	white-space: nowrap;
+	height: 8vh;
+	text-overflow: ellipsis;	
 }
 
 #footer {
@@ -217,4 +237,12 @@ span{
 	color: rgb(15, 92, 85);
 }
 
+#subirArchivo{
+	color: transparent;
+  }
 
+@media screen and (max-width: 600px) {
+	img {max-width:400px;}
+
+	
+}
