@@ -1,14 +1,25 @@
 $(document).ready(inicializarEventos);  
 
-    function inicializarEventos(){
-        if ($(window).width() < 600) {
+  function inicializarEventos(){
+    if ($(window).width() < 600) {
 
-            cambiarMenu();
-            maquetarFicheros();
-            maquetarUsuarios();
-        }
+      cambiarMenu();
+      maquetarFicheros();
+      maquetarUsuarios();
+    }
+    $("a[title='DESCARGAR']").mouseover(opcionDescarga);
+    $("a[title='DESCARGAR']").mouseout(quitarAmpliacion);
 
-    function cambiarMenu(){
+  }
+
+  function opcionDescarga(){
+    $(this).css("font-size", "1.5em");
+  }
+  function quitarAmpliacion(){
+    $(this).css("font-size", "1em");
+  }
+
+  function cambiarMenu(){
         $("<select  class='form-control' id='menu'/>").appendTo("nav");
         $("<option/>", {
         "selected": "selected",
@@ -49,9 +60,26 @@ $(document).ready(inicializarEventos);
       $(".icono").css("width","6vw");
       $("#container").css("margin", "0");
       $("#container").css("width", "100vw");
-      $("#container").css("height", "100vh");
+      //$("#container").css("height", "100vh");
       $(".grid-ficheros").css("margin-left", "-4vw");
       $(".grid-ficheros").css("margin-right", "0vw");
+     
+    }
+    function maquetarUsuarios(){
+      $(".grid-cabecera-usuarios").css("grid-template-columns",  "42vw 48vw");
+      $(".grid-cabecera-usuarios").css("margin-top","1vh");
+      $(".grid-cabecera-usuarios").css("margin-left", "1vw");
+      $(".container-usuarios").css("grid-template-columns",  "42vw 16vw 16vw 16vw");
+      $(".container-usuarios").css("height", "70vh");
+      $(".container-usuarios").css("width", "90vw");
+      $(".container-usuarios").css("padding-left", "0");
+      $("#CabId").css("display", "none");
+      $("#CabCorreo").css("display", "none");
+      $("#CabPlan").css("display", "none");
+      $(".icono").css("width","6vw");
+      $("#CabEstado").css("display", "none");
+      $(".container-usuarios").css("margin-left", "1vw");
+      $(".container-usuarios").css("margin-right", "0vw");
     }
 
     $(".grid-item").hover(function(){
@@ -61,8 +89,6 @@ $(document).ready(inicializarEventos);
         $(this).css("background-color", "rgba(255, 255, 255, 0.8)");
         $(this).css("color", "rgb(0, 0, 0)");
       }); 
-
-}
 
 
 
