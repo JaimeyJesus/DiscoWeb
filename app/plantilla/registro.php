@@ -7,7 +7,7 @@ ob_start();
 <div id='aviso'>
 	<b><?= (isset($msg))?$msg:"" ?></b>
 </div>
-
+<?php $auto = $_SERVER['PHP_SELF'];?>
 <div class="container">
   <h2>Formulario de registro</h2>
   
@@ -80,7 +80,11 @@ ob_start();
     		<button type="submit" class="btn btn-primary" name="orden" id="registro" value="Registrarse">Registro</button>
 		</div>
 		<div class="col">
+<<<<<<< HEAD
 			<input type="cancel" name="atras" class="btn btn-primary"  id="atras" onclick="Atras()" value="atras">
+=======
+			<input type="button" name="atras" class="btn btn-primary"  id="atras" onclick="Atras()" value="Atrás">
+>>>>>>> ef9120e086d8344dd67eb50b9ddddbc302fbb8a0
 		</div>
 	
   </form>

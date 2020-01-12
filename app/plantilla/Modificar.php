@@ -88,12 +88,16 @@ for ($j=0; $j < count($usuarioM); $j++){
 			onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">Modificar</button>
 		</div>	
 		<div class="col">
+<<<<<<< HEAD
 			<input type="cancel"<?php 
 			if($_SESSION['modo']==GESTIONUSUARIOS){?>
 			onclick="javascript:document.location='index.php'" <?php
 			}else{?>
 			onclick="VerArchivos()" <?php }  ?>
 			name="orden" class="btn btn-primary"  id="atras" value="Atrás">
+=======
+			<input type="button" name="orden" class="btn btn-primary" onclick="javascript:window.location='index.php'" id="atras" value="Atrás">
+>>>>>>> ef9120e086d8344dd67eb50b9ddddbc302fbb8a0
 		</div>
 	</div>
   </form>

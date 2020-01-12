@@ -7,7 +7,7 @@ ob_start();
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.php?orden=Subir Fichero">Subir fichero<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php?orden=Subir Fichero">Subir fichero<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?orden=Modificar sus datos">Modificar datos</a>
@@ -17,6 +17,9 @@ ob_start();
       </li>
       <?php } ?>
       <li class="nav-item">
+        <a class="nav-link" href="index.php">Atrás</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="index.php?orden=Cerrar Sesión">Cerrar sesión</a>
       </li>
     </ul>
@@ -25,11 +28,12 @@ ob_start();
 <?=(isset($msg))?'<p>'.$msg.'</p>':''?>
 <div class="container">
 <div class="grid-cabecera-ficheros">
-    <div class="grid-item-cabecera"><b>Nombre</b></div>
-    <div class="grid-item-cabecera"><b>Tipo</b></div>
-    <div class="grid-item-cabecera"><b>Fecha</b></div>
-    <div class="grid-item-cabecera"><b>Tamaño</b></div>
-    <div class="grid-item-cabecera"><b>Operaciones</b></div>	
+    <div class="grid-item-cabecera" id="cabNombre"><b>Nombre</b></div>
+    <div class="grid-item-cabecera" id="cabOperaciones"><b>Operaciones</b></div>
+    <div class="grid-item-cabecera" id="cabTipo"><b>Tipo</b></div>
+    <div class="grid-item-cabecera" id="cabFecha"><b>Fecha</b></div>
+    <div class="grid-item-cabecera" id="cabTamaño"><b>Tamaño</b></div>
+    	
 </div>
 <?php
 $auto = $_SERVER['PHP_SELF'];
@@ -52,6 +56,7 @@ $directorio="app/dat/".$userId;
 if(is_dir($directorio)){
     $gestor=opendir($directorio);
     while(($archivo=readdir($gestor))!==false){
+<<<<<<< HEAD
         if( $archivo=="." || $archivo==".."){
             continue;
         }
@@ -69,6 +74,26 @@ if(is_dir($directorio)){
         <div class="grid-item"><a href="#" onclick="Compartir('<?=$directorio."','".$archivo."'"?>)">
         	<img class="icono" id="icono3" alt="modificar" src="web/img/compartir.png"></a><div id="accionIcono3"><p>Compartir</p></div></div>
                
+=======
+      if( $archivo=="." || $archivo==".."){
+          continue;
+      }
+      $numeroArchivos++;
+      $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
+      ?>
+        <div class="grid-item" id="nombre"><?= $archivo ?></div>
+        <div class="grid-item" id="borrar"><a href="#" onclick="BorrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">
+          <img class="icono" title="BORRAR" src="web/img/papelera.png"></a></div>
+        <div class="grid-item" id="modificar"><a href="#" onclick="RenombrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">
+          <img class="icono" title="MODIFICAR" src="web/img/editar.png"></a></div>
+        <div class="grid-item" id="descargar"><a href="#" onclick="Descargar('<?=$directorio."','".$archivo."'"?>)">
+          <img class="icono" title="DESCARGAR" src="web/img/compartir.png"></a></div>
+        <div class="grid-item" id="tipo"><?=mime_content_type($directorio."/".$archivo) ?></div>
+        <div class="grid-item" id="fecha"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
+        <div class="grid-item" id="tamaño"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
+          
+      
+>>>>>>> ef9120e086d8344dd67eb50b9ddddbc302fbb8a0
 <?php
     }
 }
@@ -78,7 +103,7 @@ else{
 
 ?>
 </div>
-
+</div>
 <form id="botones" action="index.php?id=<?$userId?>">
 <div class="col-md-6">		
 	<span>Numero de ficheros: <?=$numeroArchivos?></span>
@@ -86,7 +111,7 @@ else{
 </div>
 </form>
 
-</div>
+
 <?php
 // Vacio el bufer y lo copio a contenido
 // Para que se muestre en div de contenido de la página principal
