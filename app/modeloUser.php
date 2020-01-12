@@ -150,6 +150,13 @@ function modeloUserComprobarNombre($nombre, &$msg){
 
 
 function modeloUserComprobarMail($mail, &$msg){
+
+    foreach($_SESSION['tusuarios'] as $clave => $valor){
+        if($valor[2]===$mail){
+            $msg="Ya existe un usuario con ese mail";
+            return false;
+        }
+    }
     if(strpos($mail, "@") && strpos($mail, ".")){
         return true;
     }
