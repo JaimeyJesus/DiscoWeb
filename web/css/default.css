@@ -134,7 +134,7 @@ textarea {
 	margin-top:-10vh;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 23vw 12.3vw 10vw 8vw 27vw ;
+  	grid-template-columns: 23vw 27vw 12.3vw 10vw 8vw  ;
   	background-color: #5E9C97;
   	padding-top: .5vw;
 }
@@ -143,7 +143,7 @@ textarea {
 	overflow-y: auto;
 	height:52vh;
   	display: grid;
-  	grid-template-columns: 23vw 12.3vw 10vw 8vw 9vw 9vw 9vw ;
+  	grid-template-columns: 23vw 9vw 9vw 9vw 12.3vw 10vw 8vw  ;
 	background-color: #5E9C97;
 	border: #000 solid 1px;
 	margin-top: 10vh;
@@ -240,9 +240,3 @@ span{
 #subirArchivo{
 	color: transparent;
   }
-
-@media screen and (max-width: 600px) {
-	img {max-width:400px;}
-
-	
-}
