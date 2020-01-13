@@ -57,7 +57,6 @@ for ($j=0; $j < count($usuarioM); $j++){
 				<div class="invalid-feedback">Por favor, introduzca una contraseña</div>
 			</div>
 		</div>
-
 	</div>
 	<div class="row">
 		<div class="col">
@@ -82,11 +81,15 @@ for ($j=0; $j < count($usuarioM); $j++){
 		</div>
 	<div class="row">
 		<div class="col">
-    		<button type="submit" class="btn btn-primary" name="Modificar" id="Modificar" value="Modificar"
-			onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">Modificar</button>
+			<div class="form-group">
+    			<button type="submit" class="btn btn-primary" name="Modificar" id="Modificar" value="Modificar"
+				onclick="confirmarModificar('<?= $usuarioM[0]."','".$usuarioM."'"?>)">Modificar</button>
+			</div>
 		</div>
 		<div class="col">
-			<input type="button" name="orden" class="btn btn-primary" onclick="javascript:window.location='index.php'" id="atras" value="Atrás">
+			<div class="form-group">
+				<input type="button" name="orden" class="btn btn-success" onclick="javascript:window.location='index.php'" id="atras" value="Atrás">
+			</div>
 		</div>
 	</div>
   </form>

@@ -25,26 +25,30 @@ $gestor=opendir($directorio);
 
 <div class="container">
 <h2>Detalles de <?=$_GET['id']?></h2>
-  <div class="row">
-    <div class="col">Nombre</div>
-    <div class="col"><?=$usuarioM[1]?></div>
-  </div>
-  <div class="row">
-    <div class="col">Email</div>
-    <div class="col"><?=$usuarioM[2]?></div>
-  </div>
-  <div class="row">
-    <div class="col">Plan</div>
-    <div class="col"><?=$usuarioM[3]?></div>
-  </div>
-  <div class="row">
-    <div class="col">Número de ficheros</div>
-    <div class="col"><?=$numeroArchivos?></div>
-  </div>
-  <div class="row">
-    <div class="col">Espacio ocupado</div>
-    <div class="col"><meter min="0" max="10000" low="5000" high="1000" optimum="0" value="<?=$espacioTotal?>"></meter></div>
-  </div>
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <th scope="row">Nombre</th>
+      <td><?=$usuarioM[1]?></td>
+    </tr>
+  <tr>
+    <th scope="row">Email</th>
+    <td><?=$usuarioM[2]?></td>
+</tr>
+  <tr>
+    <th scope="row">Plan</th>
+    <td><?=$usuarioM[3]?></td>
+</tr>
+  <tr>
+    <th scope="row">Número de ficheros</th>
+    <td><?=$numeroArchivos?></td>
+</tr>
+  <tr>
+    <th scope="row">Espacio ocupado</th>
+    <td><meter min="0" max="10000" low="5000" high="1000" optimum="0" value="<?=$espacioTotal?>"></meter></td>
+</tr>
+</tbody>
+</table>
   <div class="row">
     <div class="col">
       <form action="index.php" method="POST" id="formularioDetalles">

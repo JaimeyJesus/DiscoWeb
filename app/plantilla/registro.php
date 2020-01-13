@@ -80,7 +80,7 @@ ob_start();
     		<button type="submit" class="btn btn-primary" name="orden" id="registro" value="Registrarse">Registro</button>
 		</div>
 		<div class="col">
-			<input type="button" name="atras" class="btn btn-primary"  id="atras" onclick="Atras()" value="Atrás">
+			<input type="button" name="atras" class="btn btn-success"  id="atras" onclick="Atras()" value="Atrás">
 		</div>
 	
   </form>

@@ -23,14 +23,13 @@ ob_start();
 </nav>
 <?=(isset($msg))?'<p>'.$msg.'</p>':''?>
 <div class="container">
-<div class="grid-cabecera-ficheros">
-    <div class="grid-item-cabecera" id="cabNombre"><b>Nombre</b></div>
-    <div class="grid-item-cabecera" id="cabOperaciones"><b>Operaciones</b></div>
-    <div class="grid-item-cabecera" id="cabTipo"><b>Tipo</b></div>
-    <div class="grid-item-cabecera" id="cabFecha"><b>Fecha</b></div>
-    <div class="grid-item-cabecera" id="cabTamaño"><b>Tamaño</b></div>
-    	
-</div>
+  <div class="grid-cabecera-ficheros">
+      <div class="grid-item-cabecera" id="cabNombre"><b>Nombre</b></div>
+      <div class="grid-item-cabecera" id="cabOperaciones"><b>Operaciones</b></div>
+      <div class="grid-item-cabecera" id="cabTipo"><b>Tipo</b></div>
+      <div class="grid-item-cabecera" id="cabFecha"><b>Fecha</b></div>
+      <div class="grid-item-cabecera" id="cabTamaño"><b>Tamaño</b></div>  	
+  </div>
 <?php
 $auto = $_SERVER['PHP_SELF'];
 // identificador => Nombre, email, plan y Estado
@@ -67,9 +66,7 @@ if(is_dir($directorio)){
           <img class="icono" title="DESCARGAR" src="web/img/compartir.png"></a></div>
         <div class="grid-item" id="tipo"><?=mime_content_type($directorio."/".$archivo) ?></div>
         <div class="grid-item" id="fecha"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
-        <div class="grid-item" id="tamaño"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
-          
-      
+        <div class="grid-item" id="tamaño"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>  
 <?php
     }
 }

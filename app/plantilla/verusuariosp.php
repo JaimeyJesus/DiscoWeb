@@ -20,7 +20,7 @@ ob_start();
   </div>
 </nav>
 <?=(isset($msg))?'<p>'.$msg.'</p>':''?>
-
+<div class="container">
 <div class="grid-cabecera-usuarios">
     <div class="grid-item-cabecera"><b>ID</b></div>
     <div class="grid-item-cabecera"><b>NOMBRE</b></div>
@@ -53,6 +53,7 @@ ob_start();
 
 
 <?php endforeach; ?>
+</div>
 </div>
 <?php
 

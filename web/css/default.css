@@ -103,7 +103,7 @@ textarea {
 	position: fixed;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 8vw 8vw 8vw;
+  	grid-template-columns: 12vw 15vw 17vw 8vw 8vw 7vw 7vw 7vw;
   	background-color: #5E9C97;
   	padding-top: .5vw;
 }
@@ -119,13 +119,13 @@ textarea {
 }
 
 .container-usuarios {
-	overflow: auto;
+	overflow-y: auto;
 	height:55vh;
   	display: grid;
-  	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 8vw 8vw 8vw;
+  	grid-template-columns: 12vw 15vw 17vw 8vw 8vw 7vw 7vw 7vw;
   	background-color: #5E9C97;
 	border: #000 solid 1px;
-	margin-top: 10vh;
+	margin-top: 1vh;
 	color: #000000;
 }
 

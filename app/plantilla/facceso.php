@@ -12,7 +12,7 @@ ob_start();
 </form>
 
 <div class="container">
-  <h2>Formulario de acceso</h2>
+  <h2>Acceso</h2>
   
   <form name='ACCESO' method="POST" action="index.php" class="needs-validation" novalidate>
 	<div class="row">
@@ -30,11 +30,11 @@ ob_start();
 				value="<?= $clave ?>">
 				<div class="valid-feedback">OK</div>
 				<div class="invalid-feedback">Por favor, introduzca la contraeña</div>
+			</div>	
+			<div class="form-group">
+				<button name="orden" class="btn btn-primary" value="Entrar">Entrar</button>
+				<a href="index.php?orden=Nuevo"><input type="button" value="Registrarse" class="btn btn-success"></a>
 			</div>
-			<div class="form-group">
-			<a href="index.php?orden=Nuevo">Registrarse</a>
-			<div class="form-group">
-			<button name="orden" class="btn btn-primary" value="Entrar">Entrar</button>
 		</div>
 	</div>
 <?php 
