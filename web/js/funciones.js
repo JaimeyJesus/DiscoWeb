@@ -38,7 +38,7 @@ function Alta(){
 }
 
 function VerArchivos(){
-	document.location.href="?orden=verFicheros";
+	document.location.href="?orden=Mis Archivos";
 }
 
 function Descargar(id,fichero){

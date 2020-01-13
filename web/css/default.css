@@ -110,7 +110,7 @@ textarea {
 	position: fixed;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 8vw 8vw 8vw;
+  	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 24vw ;
   	background-color: #5E9C97;
   	padding-top: .5vw;
 }
@@ -141,7 +141,7 @@ textarea {
 	margin-top:-10vh;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 23vw 12.3vw 10vw 8vw 27vw ;
+  	grid-template-columns: 23vw 27vw 12.3vw 10vw 8vw  ;
   	background-color: #5E9C97;
   	padding-top: .5vw;
 }
@@ -150,7 +150,7 @@ textarea {
 	overflow-y: auto;
 	height:52vh;
   	display: grid;
-  	grid-template-columns: 23vw 12.3vw 10vw 8vw 9vw 9vw 9vw ;
+  	grid-template-columns: 23vw 9vw 9vw 9vw 12.3vw 10vw 8vw  ;
 	background-color: #5E9C97;
 	border: #000 solid 1px;
 	margin-top: 10vh;
@@ -203,7 +203,7 @@ input[type="submit"]{
 }
 
 button{
-	grid-column: 2 / 2;
+	grid-column: 3 / 3;
 }
 
 .wrapper {
@@ -247,9 +247,10 @@ span{
 #subirArchivo{
 	color: transparent;
   }
-
-@media screen and (max-width: 600px) {
-	img {max-width:400px;}
-
-	
+#DescargaF{
+	color:black;
 }
+#DescargaF:hover{
+	color:red;
+}
+

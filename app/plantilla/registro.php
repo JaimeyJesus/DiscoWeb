@@ -77,10 +77,10 @@ ob_start();
 	</div>
 	<div class="row">
 		<div class="col">
-    		<button type="submit" class="btn btn-primary" name="orden" id="registro" value="Registrarse">Registro</button>
+    		<input type="submit" class="btn btn-primary" name="orden" id="registro" value="Registrarse">
 		</div>
 		<div class="col">
-			<input type="button" name="atras" class="btn btn-primary"  id="atras" onclick="Atras()" value="Atrás">
+			<input type="cancel" name="atras" class="btn btn-primary"  id="atras" onclick="Atras()" value="atras">
 		</div>
 	
   </form>

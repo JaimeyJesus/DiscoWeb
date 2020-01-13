@@ -22,23 +22,25 @@ ob_start();
 <?=(isset($msg))?'<p>'.$msg.'</p>':''?>
 
 <div class="grid-cabecera-usuarios">
-    <div class="grid-item-cabecera"><b>ID</b></div>
-    <div class="grid-item-cabecera"><b>NOMBRE</b></div>
-    <div class="grid-item-cabecera"><b>CORREO</b></div>
-    <div class="grid-item-cabecera"><b>PLAN</b></div>
-    <div class="grid-item-cabecera"><b>ESTADO</b></div>
-    <div class="grid-item-cabecera"><b>BORRAR</b></div>
-    <div class="grid-item-cabecera"><b>MODIFICAR</b></div>
-    <div class="grid-item-cabecera"><b>DETALLES</b></div>
+    <div class="grid-item-cabecera" id="CabId"><b>ID</b></div>
+    <div class="grid-item-cabecera" id="CabNombre"><b>NOMBRE</b></div>
+    <div class="grid-item-cabecera" id="CabCorreo"><b>CORREO</b></div>
+    <div class="grid-item-cabecera" id="CabPlan"><b>PLAN</b></div>
+    <div class="grid-item-cabecera" id="CabEstado"><b>ESTADO</b></div>
+    <div class="grid-item-cabecera" id="CabBorrar"><b>OPERACIONES</b></div>
+    <!-- <div class="grid-item-cabecera" id="CabModificar"><b>MODIFICAR</b></div> -->
+    <!-- <div class="grid-item-cabecera" id="CabDetalles"><b>DETALLES</b></div> -->
 </div>
     <?php
     $auto = $_SERVER['PHP_SELF'];    
     ?>
 <div class="container-usuarios">
     <?php foreach ($usuarios as $clave => $datosusuario) : ?>    		
-    	<div class="grid-item"><?= $clave ?></div>
+    	<div class="grid-item" id="id"><?= $clave ?></div>
 	<?php for  ($j=1; $j < count($datosusuario); $j++) :?>
-	<div class="grid-item"><?=$datosusuario[$j] ?></div>
+  <div class="grid-item"<?=($j==2)?"id='Correo'":''?>
+  <?=($j==3)?"id='plan'":''?><?=($j==4)?"id='Estado'":''?>
+  ><?=$datosusuario[$j] ?></div>
     	<?php endfor;?>
     <div class="grid-item"><a href="#"
 		onclick="confirmarBorrar('<?= $datosusuario[1]."','".$clave."'"?>);">

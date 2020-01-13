@@ -114,7 +114,7 @@ function modeloUserComprobacionesNuevo($usuarioid,$valoresusuario, $passrepetida
 function modeloUserComprobacionesModificar($valoresusuario, &$msg){
     if(comprobarContraseñas($valoresusuario[0],$valoresusuario[0], $msg)){
         if(modeloUserComprobarNombre($valoresusuario[1], $msg)){
-            if(modeloUserComprobarMail($valoresusuario[2], $msg)){
+            if(ComprobarMailModificar($valoresusuario[2], $msg)){
                 return true;
             }
         }   
@@ -163,6 +163,14 @@ function modeloUserComprobarMail($mail, &$msg){
     $msg="El email no es correcto.";
     return false;
     
+}
+
+function ComprobarMailModificar($mail, &$msg){
+    if(strpos($mail, "@") && strpos($mail, ".")){
+        return true;
+    }
+    $msg="El email no es correcto.";
+    return false;
 }
 
 

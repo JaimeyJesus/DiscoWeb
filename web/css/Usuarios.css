@@ -1,0 +1,20 @@
+@media screen and (max-width: 760px) {
+  .grid-item-cabecera {
+    font-size: 0.7em;
+  }
+  #CabId,
+  #CabCorreo,
+  #CabPlan,
+  #CabEstado {
+    display: none;
+  }
+  .grid-cabecera-usuarios {
+    grid-template-columns: 42w 48w;
+  }
+  .container-usuarios {
+    grid-template-columns: 42w 16w 16w 16w;
+  }
+  .col {
+    display: block;
+  }
+}
