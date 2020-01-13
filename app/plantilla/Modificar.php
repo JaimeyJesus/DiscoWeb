@@ -15,7 +15,7 @@ for ($j=0; $j < count($usuarioM); $j++){
 <div class="container">
   <h2>Formulario de modificación</h2>
   
-  <form action="index.php?orden=Modificar" method="POST" class="needs-validation" novalidate>
+  <form action="index.php?orden=Modificar" method="POST" class="needs-validation">
 	<div class="row">
 		<div class="col">
 			<div class="form-group">
