@@ -94,6 +94,13 @@ a {
   	color: #429;
   	text-decoration: none;
 }
+#DescargaF{
+	text-decoration: none;
+	color:black;
+}
+#DescargaF:hover{
+	color:red;
+}
 textarea {
    	resize: none;
 }
