@@ -16,7 +16,7 @@ ob_start();
 		<div class="col">
 			<div class="form-group">
 				<label for="id">Identificador:</label>
-				<input type="text" class="form-control" id="id" placeholder="Introduzca un identificador" name="id" required
+				<input type="text" class="form-control" id="ident" placeholder="Introduzca un identificador" name="id" required
 					value="<?=(isset($_POST['id']))?$_POST['id']:""?>">
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback">Por favor, introduzca un identificador</div>
@@ -80,7 +80,7 @@ ob_start();
     		<input type="submit" class="btn btn-primary" name="orden" id="registro" value="Registrarse">
 		</div>
 		<div class="col">
-			<input type="cancel" name="atras" class="btn btn-primary"  id="atras" onclick="Atras()" value="atras">
+			<input type="cancel" name="atras" class="btn btn-success"  id="atras" onclick="Atras()" value="atras">
 		</div>
 	
   </form>

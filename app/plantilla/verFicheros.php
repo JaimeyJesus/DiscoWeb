@@ -23,7 +23,7 @@ ob_start();
   </div>
 </nav>
 <?=(isset($msg))?'<p>'.$msg.'</p>':''?>
-<div class="container">
+<div class="container-ficheros">
 <div class="grid-cabecera-ficheros">
     <div class="grid-item-cabecera" id="cabNombre"><b>Nombre</b></div>
     <div class="grid-item-cabecera" id="cabOperaciones"><b>Operaciones</b></div>

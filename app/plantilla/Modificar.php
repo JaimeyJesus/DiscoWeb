@@ -96,7 +96,7 @@ for ($j=0; $j < count($usuarioM); $j++){
 			onclick="javascript:document.location='index.php'" <?php
 			}else{?>
 			onclick="VerArchivos()" <?php }  ?>
-			name="orden" class="btn btn-primary"  id="atras" value="Atrás">
+			name="orden" class="btn btn-success"  id="atras" value="Atrás">
 		</div>
 	</div>
   </form>

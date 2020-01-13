@@ -90,7 +90,7 @@ ob_start();
 		<button type="submit" class="btn btn-primary" name="orden" id="alta" value="Alta">Registro</button>
 	</div>
 	<div class="col">  
-		<button name="atras" class="btn btn-primary"  id="atras" onclick="VolverListaUsuarios()" value="atras">Atrás</button>
+		<button name="atras" class="btn btn-success"  id="atras" onclick="VolverListaUsuarios()" value="atras">Atrás</button>
 		</div>
 	</div>
   </form>

@@ -52,6 +52,7 @@ $(document).ready(inicializarEventos);
       $(".grid-ficheros").css("padding-left", "0");
       $("#titulo").css("font-size", "2em");
       $("span").css("display", "none");
+      $("h2").css("display", "none");
       $(".grid-item").css("height","8vh");
       $(".grid-item").css("padding-top","2vh");
       $("#cabTipo").css("display", "none");

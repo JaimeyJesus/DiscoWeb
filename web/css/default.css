@@ -13,6 +13,7 @@ body {
 nav{
 	height: 8vh;
 	width: 88vw;
+	font-family: 'Roboto', sans-serif;
 }
 #menu{
 	background-color: #3A847E;
@@ -22,9 +23,9 @@ nav{
 	color: #ffffff;
 }
 #container {		
-	position:fixed;
+	position:fixed;	
 	margin: 1vh auto 1vh 1vw;
-	width: 94%;
+	width: 98%;
 	height:89%;
 	background: rgba(255, 255, 255, 0.5);
 	border: solid 1px;
@@ -45,6 +46,7 @@ h1{
 #header h1 {
 	font-size: 3rem;
 	margin: 0;
+	font-family: 'Rubik', sans-serif;
 }
 #header h2 {
   	font-size: 20px;
@@ -112,7 +114,8 @@ textarea {
   	display: grid;
   	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 24vw ;
   	background-color: #5E9C97;
-  	padding-top: .5vw;
+	  padding-top: .5vw;
+	  font-family: 'Rubik', sans-serif;
 }
 
 .grid-item-cabecera {
@@ -129,11 +132,15 @@ textarea {
 	overflow: auto;
 	height:55vh;
   	display: grid;
-  	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 8vw 8vw 8vw;
+  	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 7.5vw 7.5vw 7.5vw;
   	background-color: #5E9C97;
 	border: #000 solid 1px;
 	margin-top: 10vh;
 	color: #000000;
+}
+
+.container-ficheros{
+	width: 88vw;
 }
 
 .grid-cabecera-ficheros {
@@ -141,16 +148,17 @@ textarea {
 	margin-top:-10vh;
 	height:4vh;
   	display: grid;
-  	grid-template-columns: 23vw 27vw 12.3vw 10vw 8vw  ;
+  	grid-template-columns: 25vw 27vw 13vw 11vw 12vw  ;
   	background-color: #5E9C97;
-  	padding-top: .5vw;
+	  padding-top: .5vw;
+	  font-family: 'Rubik', sans-serif;
 }
 
 .grid-ficheros {
 	overflow-y: auto;
 	height:52vh;
   	display: grid;
-  	grid-template-columns: 23vw 9vw 9vw 9vw 12.3vw 10vw 8vw  ;
+  	grid-template-columns: 25vw 9vw 9vw 9vw 13vw 11vw 10.5vw  ;
 	background-color: #5E9C97;
 	border: #000 solid 1px;
 	margin-top: 10vh;
@@ -170,7 +178,8 @@ textarea {
 	overflow:hidden;
 	white-space: nowrap;
 	height: 8vh;
-	text-overflow: ellipsis;	
+	text-overflow: ellipsis;
+	font-family: 'Montserrat', sans-serif;	
 }
 
 #footer {
@@ -254,3 +263,26 @@ span{
 	color:red;
 }
 
+.enlaceboton {    font-family: verdana, arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	padding: 4px;
+	background-color: #bbbb04;
+	color: #000000;
+	text-decoration: none;
+ }
+ .enlaceboton:link,
+ .enlaceboton:visited {
+	border-top: 1px solid #cccccc;
+	border-bottom: 2px solid #666666;
+	border-left: 1px solid #cccccc;
+	border-right: 2px solid #666666;
+	text-decoration: none;
+ }
+ .enlaceboton:hover {
+	 border-bottom: 1px solid #cccccc;
+	border-top: 2px solid #666666;
+	border-right: 1px solid #cccccc;
+	border-left: 2px solid #666666;
+	text-decoration: none;
+ }

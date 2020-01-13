@@ -30,7 +30,7 @@ ob_start();
       </div>
       <div class="col">
         <div class="form-group">
-        <input type="button" name="atras" class="btn btn-primary"  id="atras" onclick="javascript:document.location='index.php?orden=Mis Archivos'" value="Atrás">
+        <input type="button" name="atras" class="btn btn-success"  id="atras" onclick="javascript:document.location='index.php?orden=Mis Archivos'" value="Atrás">
         </div>
       </div>
     </div>

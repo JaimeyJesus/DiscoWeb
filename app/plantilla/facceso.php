@@ -32,9 +32,12 @@ ob_start();
 				<div class="invalid-feedback">Por favor, introduzca la contraeña</div>
 			</div>
 			<div class="form-group">
-			<a href="index.php?orden=Nuevo">Registrarse</a>
-			<div class="form-group">
 			<button name="orden" class="btn btn-primary" value="Entrar">Entrar</button>
+			</div>
+			<div class="form-group">
+			<a href="index.php?orden=Nuevo" class="enlaceboton">Registrarse</a>
+			</div>
+
 		</div>
 	</div>
 <?php 
