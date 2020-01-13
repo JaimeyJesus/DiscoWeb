@@ -2,11 +2,11 @@ $(document).ready(inicializarEventos);
 
   function inicializarEventos(){
     if ($(window).width() < 600) {
-
       cambiarMenu();
       maquetarFicheros();
       maquetarUsuarios();
     }
+
     $("a[title='DESCARGAR']").mouseover(opcionDescarga);
     $("a[title='DESCARGAR']").mouseout(quitarAmpliacion);
     
@@ -24,6 +24,10 @@ $(document).ready(inicializarEventos);
       }, function(){
       $(this).css("background-color", "rgba(255, 255, 255, 0.8)");
       $(this).css("color", "rgb(0, 0, 0)");
+    });
+
+    $(window).resize(function(){
+        location.href = location.href;     
     });
 
     $("img").hover(function(){
