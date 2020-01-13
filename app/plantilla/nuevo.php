@@ -11,7 +11,7 @@ ob_start();
 <div class="container">
   <h2>Formulario de registro</h2>
   
-  <form action="index.php?orden=Alta" method="POST" class="needs-validation" novalidate>
+  <form action="index.php?orden=Alta" method="POST" class="needs-validation">
 	<div class="row">
 		<div class="col">
 			<div class="form-group">
