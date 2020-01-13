@@ -59,7 +59,6 @@ if(is_dir($directorio)){
       $numeroArchivos++;
       $espacioTotal +=round((filesize($directorio."/".$archivo)/1024),2);
       ?>
-
         <div class="grid-item" id="nombreFichero"><a class="icono" id="DescargaF" href="#"  title="DESCARGAR" onclick="Descargar('<?=$directorio."','".$archivo."'"?>)"><?= $archivo ?></a></div>
         <div class="grid-item" id="borrar"><a href="#" onclick="BorrarFichero('<?= $directorio."/".$archivo."','".$userId."'"?>);">
           <img class="icono" title="BORRAR" src="web/img/papelera.png"></a></div>
@@ -70,7 +69,8 @@ if(is_dir($directorio)){
         <div class="grid-item" id="tipo"><?=mime_content_type($directorio."/".$archivo) ?></div>
         <div class="grid-item" id="fecha"><?=date("d/m/Y",filemtime($directorio."/".$archivo)) ?></div>
         <div class="grid-item" id="tamaño"><?=round((filesize($directorio."/".$archivo)/1024),2)."Kb" ?></div>
-
+          
+      
 <?php
     }
 }

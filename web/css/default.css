@@ -45,6 +45,7 @@ h1{
 #header h1 {
 	font-size: 3rem;
 	margin: 0;
+	font-family: 'Rubik', sans-serif;
 }
 #header h2 {
   	font-size: 20px;
@@ -94,13 +95,6 @@ a {
   	color: #429;
   	text-decoration: none;
 }
-#DescargaF{
-	text-decoration: none;
-	color:black;
-}
-#DescargaF:hover{
-	color:red;
-}
 textarea {
    	resize: none;
 }
@@ -113,6 +107,7 @@ textarea {
   	grid-template-columns: 12vw 15vw 17vw 10vw 10vw 24vw ;
   	background-color: #5E9C97;
   	padding-top: .5vw;
+  	font-family: 'Rubik', sans-serif;
 }
 
 .grid-item-cabecera {
@@ -144,6 +139,7 @@ textarea {
   	grid-template-columns: 23vw 27vw 12.3vw 10vw 8vw  ;
   	background-color: #5E9C97;
   	padding-top: .5vw;
+  	font-family: 'Rubik', sans-serif;
 }
 
 .grid-ficheros {
@@ -252,5 +248,11 @@ span{
 }
 #DescargaF:hover{
 	color:red;
+}
+.nav-link{
+	font-family: 'Roboto', sans-serif;
+}
+.grid-item{
+	font-family: 'Montserrat', sans-serif;
 }
 

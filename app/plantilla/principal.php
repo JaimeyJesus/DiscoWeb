@@ -8,6 +8,9 @@
     <link   type="text/css" href="web/css/default.css" rel="stylesheet" />
     <link   type="text/css" href="web/css/Usuarios.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Gelasio|Montserrat|Roboto|Rubik&display=swap" rel="stylesheet"> 
     <script type="text/javascript" src="web/js/jquery.js"></script>   
     <script type="text/javascript" src="web/js/validaciones.js"></script>
     <script type="text/javascript" src="web/js/funciones.js"></script>   
