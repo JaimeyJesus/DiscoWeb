@@ -9,6 +9,14 @@ $(document).ready(inicializarEventos);
     }
     $("a[title='DESCARGAR']").mouseover(opcionDescarga);
     $("a[title='DESCARGAR']").mouseout(quitarAmpliacion);
+    
+    $(".grid-item").hover(function(){
+    $(this).css("background-color", "rgba(200, 200, 200, 0.8)");
+    $(this).css("color", "rgb(255, 0, 0)");
+    }, function(){
+    $(this).css("background-color", "rgba(255, 255, 255, 0.8)");
+    $(this).css("color", "rgb(0, 0, 0)");
+  });
 
   }
 
@@ -83,13 +91,7 @@ $(document).ready(inicializarEventos);
       $(".container-usuarios").css("margin-right", "0vw");
     }
 
-    $(".grid-item").hover(function(){
-        $(this).css("background-color", "rgba(200, 200, 200, 0.8)");
-        $(this).css("color", "rgb(255, 0, 0)");
-        }, function(){
-        $(this).css("background-color", "rgba(255, 255, 255, 0.8)");
-        $(this).css("color", "rgb(0, 0, 0)");
-      }); 
+ 
 
 
 
