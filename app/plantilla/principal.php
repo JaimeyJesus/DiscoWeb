@@ -27,10 +27,10 @@
             <?= $contenido ?>
             <footer class="page-footer font-small blue pt-4">
                 <div class="container-fluid text-center text-md-left">
-
-                <div class="footer-copyright text-center py-3">
-                    © 2020 Copyright: Diseñado y creado por Jesus Digón y Jaime Zaloña
-                    <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+                    <div class="footer-copyright text-center py-3">
+                        © 2020 Copyright: Diseñado y creado por Jesus Digón y Jaime Zaloña.
+                        Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a>
+                    </div>
                 </div>
             </footer>
         </div>        
